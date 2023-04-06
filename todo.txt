@@ -1,0 +1,3 @@
+- Style Scrollbar
+- Save light mode in localstorge
+- Make some shit
