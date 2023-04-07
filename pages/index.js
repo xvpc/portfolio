@@ -1,5 +1,8 @@
 import React, {useState, useEffect} from 'react'
 
+import projectData from '../data/projects.json'
+import Projects from '@/components/Projects';
+
 // Next
 import Head from 'next/head'
 import Image from 'next/image'
@@ -13,14 +16,13 @@ import { FaDiscord } from "@react-icons/all-files/fa/FaDiscord";
 
 import { MdOutlineLightMode } from "react-icons/md";
 import { MdOutlineDarkMode } from "react-icons/md";
-import { SlLink } from "react-icons/sl";
 
 // Liab
 import Ripples from 'react-ripples'
 
 export default function Home() {
   // Light Mode
-  const [mode, setMode] = useState('light')
+  const [mode, setMode] = useState('dark')
   const handleMode = () => {
     if(mode === 'light'){
       setMode('dark')
@@ -70,6 +72,7 @@ export default function Home() {
         </header>
         <main className='container-fluid my-5'>
           <div className='main-container d-flex flex-column justify-content-between align-items-center gap-5'>
+            {/* Introduction */}
             <div className='introduction-container' id='introduction'>
               {/* <div className={`${mode === 'light' ? 'bg-dark' : 'bg-white'} d-none d-md-inline-block introduction-top-bollets`}></div> */}
               {/* <div className={`${mode === 'light' ? 'bg-dark' : 'bg-white'} d-none d-md-inline-block introduction-bottom-bollets`}></div> */}
@@ -84,7 +87,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
+            {/* QandA */}
             <div className='qanda-container border border-info border-1 rounded shadow-lg container p-3 d-flex flex-column justify-content-start align-items-center gap-3' id='qanda'>
               <div className='d-flex flex-column justify-content-center align-items-start gap-1'>
                 <h4 className='fw-bold'>Who Are We?</h4>
@@ -99,29 +102,15 @@ export default function Home() {
                 <p className='ps-3 text-secondary'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa corrupti laborum laboriosam temporibus praesentium laudantium quasi a vero, impedit blanditiis fuga vitae aliquid voluptatibus sunt tenetur adipisci beatae minus obcaecati.</p>
               </div>
             </div>
-            <div className='projects-container container d-flex flex-column justify-content-center align-items-center gap-2' id='projects'>
+            {/* Projects */}
+            <div className='projects-container container d-flex flex-column justify-content-center align-items-center gap-3' id='projects'>
               <div className={`${mode === 'light' ? 'border-black text-black' : 'border-white text-white'} border fw-bold py-2 px-3 w-auto`}>Projects Example</div>
               <div className='d-flex flex-row flex-wrap justify-content-center align-items-center gap-3'>
-                <div style={{width: '250px', height: '150px'}} className='project-container d-flex flex-column justify-content-center align-items-center rounded px-2'>
-                  <Link className='rounded-1 overflow-hidden shadow bg-dark' href='#'>
-                    <Image style={{objectFit: 'cover'}} className='img-fluid h-100' src='/images/siteimgs/home.png' height='1080' width='1920' alt='Inroduction Image' />
-                  </Link>
-                  <div style={{fontSize: '25px'}} className='project-container-overlay d-flex flex-row justify-content-center align-items-center'>
-                    <Ripples color='#adb5bd'>
-                      <Link title='tpanime.com' href='#' className='border-bottom border-black d-flex text-center align-items-center justify-content-center'>
-                        <SlLink />
-                      </Link>
-                    </Ripples>
-                    
-                    <Ripples color='#adb5bd'>
-                      <Link title='GitHub' href='#projects' className={`${mode === 'light' ? 'text-black' : 'text-white'} d-flex text-center align-items-center justify-content-center`}>
-                        <AiFillGithub />
-                      </Link>
-                    </Ripples>
-
-                  </div>
-                </div>
-
+                {
+                  projectData && projectData.map(items => (
+                    <Projects key={items.name} projectInfo={items} />
+                  ))
+                }
               </div>
             </div>
 
