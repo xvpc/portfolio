@@ -1,7 +1,9 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
+
+import Projects from '@/components/Projects';
 
 import projectData from '../data/projects.json'
-import Projects from '@/components/Projects';
+import introductionData from '../data/introduction.json'
 
 // Next
 import Head from 'next/head'
@@ -16,11 +18,29 @@ import { FaDiscord } from "@react-icons/all-files/fa/FaDiscord";
 
 import { MdOutlineLightMode } from "react-icons/md";
 import { MdOutlineDarkMode } from "react-icons/md";
+import { FiArrowDown } from "react-icons/fi";
 
 // Liab
+import Placeholder from 'react-bootstrap/Placeholder';
+
 import Ripples from 'react-ripples'
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectCards } from 'swiper';
+
+import 'swiper/css';
+import "swiper/css/effect-cards";
+
 export default function Home() {
+  const introductionRefs = useRef()
+  const projectsRefs = useRef()
+  const footerRefs = useRef()
+
+  const [loaded, setLoaded] = useState(false)
+  useEffect(() => {
+    setLoaded(true)
+  }, [])
+
   // Light Mode
   const [mode, setMode] = useState('dark')
   const handleMode = () => {
@@ -30,6 +50,45 @@ export default function Home() {
       setMode('light')
     }
   }
+
+  // const [scrolled, setScrolled] = useState('')
+  useEffect(() => {
+    const projectContainer = document.querySelectorAll('.project-container')
+    const introductionName = document.querySelector('.introduction-name')
+    const introductionDescription = document.querySelector('.introduction-description')
+    const introductionSwiper = document.querySelector('.introduction-swiper')
+
+    const handleScroll = () => {
+      if(typeof window !== 'undefined'){
+        const {scrollY} = window
+        console.log(scrollY)
+        // Projects
+        if(scrollY >= projectsRefs.current.scrollHeight){
+          projectContainer.forEach((items) => {
+            items.classList.remove('move-items-bottom')
+          })
+        }
+        if(scrollY >= introductionRefs.current.scrollHeight){
+          introductionName.classList.remove('move-items-top')
+          introductionDescription.classList.remove('move-items-left')
+          introductionSwiper.classList.remove('move-items-right')
+        }
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll, true)
+    return () => {
+      window.addEventListener('scroll', handleScroll, true)
+    }
+  })
+
+  // useEffect(() => {
+  //   if(projectsRefs.current.scrollHeight){
+  //     console.log('yes it is')
+  //   }else{
+  //     console.log('no')
+  //   }
+  // }, [])
 
   return (
     <>
@@ -63,48 +122,61 @@ export default function Home() {
                   <AiFillLinkedin />
                   <span className=''>LinkedIn</span>
                 </Link>
-                <Link className={`${mode === 'light' ? 'text-dark' : 'text-white'} hover-effect d-flex flex-row justify-content-center align-items-center gap-1 fw-bold`} href="#footer">
-                  <span className=''>Contact Me?</span>
-                </Link>
+                <span onClick={() => {
+                  footerRefs.current.scrollIntoView({behavior: 'smooth'})
+                }} className={`${mode === 'light' ? 'text-dark' : 'text-white'} hover-effect d-flex flex-row justify-content-center align-items-center gap-1 fw-bold`}>Contact Me?</span>
               </div>
             </div>
           </div>
         </header>
+
         <main className='container-fluid my-5'>
           <div className='main-container d-flex flex-column justify-content-between align-items-center gap-5'>
             {/* Introduction */}
-            <div className='introduction-container' id='introduction'>
-              {/* <div className={`${mode === 'light' ? 'bg-dark' : 'bg-white'} d-none d-md-inline-block introduction-top-bollets`}></div> */}
-              {/* <div className={`${mode === 'light' ? 'bg-dark' : 'bg-white'} d-none d-md-inline-block introduction-bottom-bollets`}></div> */}
+            <div ref={introductionRefs} className='introduction-container' id='introduction'>
+              <div className={`${mode === 'light' ? 'bg-dark' : 'bg-white'} introduction-top-bollets`}></div>
+              <div className={`${mode === 'light' ? 'bg-dark' : 'bg-white'} introduction-bottom-bollets`}></div>
 
-              <div className='container d-flex flex-column flex-md-row justify-content-center align-items-center gap-5'>
-                <div className='introduction-image order-1 order-md-0 shadow-lg'>
-                  <Image src='/images/nerd.gif' height='150' width='230' alt='Inroduction Image' />
+              <div className='container px-5 overflow-hidden d-flex flex-column flex-md-row justify-content-between align-items-center gap-4'>
+                <div className='w-75 text-start d-flex flex-column justify-content-center align-items-start gap-3'>
+                  <h3 className='introduction-name move-items-top p-0 m-0 fw-bold'>User Name</h3>
+                  <p style={{fontSize: '15px'}} className='introduction-description move-items-left p-0 m-0 fw-light lh-lg font-monospace'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore maiores nulla quasi repudiandae veritatis distinctio pariatur tempora corporis quod est rem provident minus reprehenderit, excepturi mollitia dignissimos suscipit magnam, corrupti odio voluptatum delectus optio, dolorum quis. Quae blanditiis nesciunt neque.</p> 
                 </div>
-                <div className='introduction-description text-center d-flex flex-column justify-content-center align-items-center gap-3'>
-                  <h3 className='p-0 m-0 fw-bold'>User Name</h3>
-                  <p style={{fontSize: '15px'}} className='p-0 m-0 w-75 fw-light'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, rerum a. Iste, ipsum quae unde obcaecati iure repellendus blanditiis officiis nam debitis sapiente et atque!</p>
-                </div>
+
+                <Swiper
+                effect={'cards'}
+                grabCursor={true}
+                modules={[EffectCards]}
+                style={{height: '300px', width: '220px'}} 
+                className='introduction-swiper move-items-right shadow-lg'>
+                  {
+                    introductionData && introductionData.map((items, index) => (
+                      <SwiperSlide key={index} className={`bg-${items.color || 'info'} p-3 d-flex flex-column justify-content-center align-items-start gap-1`}>
+                        <h4 className='fw-bold'>{items?.name}</h4>
+                        {loaded ?
+                        <p style={{fontSize: '12px'}}>{items?.description}</p>
+                        :
+                        <Placeholder className='w-75' as="p" animation="wave">
+                          <Placeholder xs={12} />
+                          <Placeholder xs={10} />
+                          <Placeholder xs={8} />
+                        </Placeholder>
+                        }
+                      </SwiperSlide>
+                    ))
+                  }
+                </Swiper>
               </div>
             </div>
-            {/* QandA */}
-            <div className='qanda-container border border-info border-1 rounded shadow-lg container p-3 d-flex flex-column justify-content-start align-items-center gap-3' id='qanda'>
-              <div className='d-flex flex-column justify-content-center align-items-start gap-1'>
-                <h4 className='fw-bold'>Who Are We?</h4>
-                <p className='ps-3 text-secondary'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim rem laudantium illum harum ad cumque maxime est esse asperiores, nesciunt, ea quaerat quibusdam ratione voluptatem rerum exercitationem nulla eligendi! Quis!</p>
-              </div>
-              <div className='d-flex flex-column justify-content-center align-items-start gap-1'>
-                <h4 className='fw-bold'>Why Us?</h4>
-                <p className='ps-3 text-secondary'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla, fugiat libero voluptatum inventore pariatur atque qui, quo aut rerum exercitationem aliquam laborum animi reprehenderit. Fuga aperiam impedit, eum nulla necessitatibus perspiciatis non quas sequi, facilis ea nihil saepe aut tenetur aliquid ex praesentium molestiae corporis! Est praesentium possimus officiis recusandae.</p>
-              </div>
-              <div className='d-flex flex-column justify-content-center align-items-start gap-1'>
-                <h4 className='fw-bold'>How It Works?</h4>
-                <p className='ps-3 text-secondary'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa corrupti laborum laboriosam temporibus praesentium laudantium quasi a vero, impedit blanditiis fuga vitae aliquid voluptatibus sunt tenetur adipisci beatae minus obcaecati.</p>
-              </div>
-            </div>
+
             {/* Projects */}
-            <div className='projects-container container d-flex flex-column justify-content-center align-items-center gap-3' id='projects'>
-              <div className={`${mode === 'light' ? 'border-black text-black' : 'border-white text-white'} border fw-bold py-2 px-3 w-auto`}>Projects Example</div>
+            <div ref={projectsRefs} className='projects-container overflow-hidden container d-flex flex-column justify-content-center align-items-center gap-3' id='projects'>
+              <div onClick={() => {
+                projectsRefs.current.scrollIntoView({behavior: 'smooth'})
+              }} className={`${mode === 'light' ? 'border-black text-black' : 'border-white text-white'} d-flex flex-column justify-content-center align-items-center gap-1 border-bottom py-2 px-3 w-auto`}>
+                <span>Check My Projects</span>
+                <FiArrowDown className='projects-arrow fs-5' />
+              </div>
               <div className='d-flex flex-row flex-wrap justify-content-center align-items-center gap-3'>
                 {
                   projectData && projectData.map(items => (
@@ -116,8 +188,9 @@ export default function Home() {
 
           </div>
         </main>
+
         <footer>
-          <div id='footer' className='w-100 p-1 bg-black text-white'>
+          <div ref={footerRefs} id='footer' className='w-100 p-1 bg-black text-white'>
             <div className='footer-container container d-flex flex-row justify-content-center align-items-center gap-3'>
               <p className='fs-5 p-0 m-0 fw-bold'>Contact:</p>
               <div className='d-flex flex-row flex-wrap justify-content-center align-items-center gap-3'>

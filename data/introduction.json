@@ -1,0 +1,17 @@
+[
+    {
+        "color": "info",
+        "name": "Who Are We?",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim rem laudantium illum harum ad cumque maxime est esse asperiores, nesciunt, ea quaerat quibusdam ratione voluptatem rerum exercitationem nulla eligendi! Quis!"
+    },
+    {
+        "color": "warning",
+        "name": "Why Us?",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim rem laudantium illum harum ad cumque maxime est esse asperiores, nesciunt, ea quaerat quibusdam ratione voluptatem rerum exercitationem nulla eligendi! Quis!"
+    },
+    {
+        "color": "danger",
+        "name": "How It Works?",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim rem laudantium illum harum ad cumque maxime est esse asperiores, nesciunt, ea quaerat quibusdam ratione voluptatem rerum exercitationem nulla eligendi! Quis!"
+    }
+]

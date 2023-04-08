@@ -20,6 +20,7 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
     "react-ripples": "^2.2.1",
-    "sass": "^1.60.0"
+    "sass": "^1.60.0",
+    "swiper": "^9.2.0"
   }
 }

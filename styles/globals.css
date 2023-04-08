@@ -1,10 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Fuzzy+Bubbles&family=Nunito&family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap');
+
 :root{
     --main-color: rgba(30, 187, 235, 0.829);
     --main-transition: .5s;
     --overlay-color: #d1d7da86;
 }
+html, body{
+    overflow-x: hidden;
+}
 *{
-    font-family: Cairo, Roboto, Arial, Helvetica, sans-serif;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
 }
 ul{
     margin: 0 !important;
@@ -44,6 +49,26 @@ html {
 }
 /* End Scrollbar */
 
+/* Start Custom Classes */
+.move-items-top{
+    transform: translateY(-1000px) rotate(90deg);
+    
+}
+.move-items-bottom{
+    transform: translateY(-1000px) rotate(90deg);
+}
+.move-items-right{
+    translate: 1000px;
+    rotate: 90deg;
+    /* transform: translateX(-1000px) rotate(90deg); */
+}
+.move-items-left{
+    translate: -1000px;
+    rotate: 90deg;
+    /* transform: translateX(1000px) rotate(90deg); */
+}
+/* End Custom Classes */
+
 /* Start Navbar */
 .hover-effect{
     position: relative;
@@ -69,7 +94,17 @@ html {
     background: linear-gradient(45deg , transparent 10%,transparent 11%, transparent 89% , var(--main-color) 90%),linear-gradient(135deg , var(--main-color) 10%,transparent 11%, transparent 89% , transparent 90%),radial-gradient(circle, transparent 25%, transparent  26%),linear-gradient(45deg, transparent 46%, transparent 47%, transparent 52%, transparent 53%), linear-gradient(135deg, transparent 46%, transparent 47%, transparent 52%, transparent 53%);
         background-size: 3em 3em;
 } */
+.projects-container{
+    margin: 150px 0;
+}
 /* Start Introduction */
+.introduction-name,
+.introduction-description{
+    transition: 2s;
+}
+.introduction-swiper{
+    transition: 3s;
+}
 .introduction-container{
     position: relative;
 }
@@ -78,33 +113,44 @@ html {
     top: -50px;
     left: 0;
     width: 100%;
-    height: 5px;
-    transform: rotate(-3deg);
+    height: 2px;
 }
 .introduction-bottom-bollets{
     position: absolute;
     bottom: -50px;
     left: 0;
     width: 100%;
-    height: 5px;
+    height: 2px;
 }
-.introduction-image{
+.introduction-swiper{
     animation: bounce-image 4s linear infinite;
 }
 @keyframes bounce-image {
-    0%{
+    0%,100%{
         transform: translateY(-10px);
     }
     50%{
         transform: translateY(10px);
     }
-    100%{
-        transform: translateY(-10px);
-    }
 }
 /* End Introduction */
 
 /* Start Projects */
+.projects-arrow{
+    animation: move-arrow 1.5s linear infinite;
+}
+@keyframes move-arrow {
+    0%, 10%, 20%, 50%, 80%, 100%{
+        transform: translateY(0);
+    }
+    40%, 60%{
+        transform: translateY(-5px);
+    }
+
+}
+.project-container{
+    transition: 2s;
+}
 .project-container{
     position: relative;
     z-index: 1;
