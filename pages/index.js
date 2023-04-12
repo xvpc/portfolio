@@ -85,10 +85,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         {/* ICONS */}
-        <link rel="shortcut icon" type="image/x-icon" href='/favicon/favicon.ico' />
-        <link rel="apple-touch-icon" sizes="180x180" href='/favicon/apple-touch-icon.png' />
-        <link rel="icon" type="image/png" sizes="32x32" href='/favicon/favicon-32x32.png'/>
-        <link rel="icon" type="image/png" sizes="16x16" href='/favicon/favicon-16x16.png'/>
+        <link rel="shortcut icon" type="image/x-icon" href='./favicon/favicon.ico' />
+        <link rel="apple-touch-icon" sizes="180x180" href='./favicon/apple-touch-icon.png' />
+        <link rel="icon" type="image/png" sizes="32x32" href='./favicon/favicon-32x32.png'/>
+        <link rel="icon" type="image/png" sizes="16x16" href='./favicon/favicon-16x16.png'/>
       </Head>
       
       <div className={`text-white bg-dark main-content d-flex flex-column justify-content-between min-vh-100`}>
@@ -114,7 +114,7 @@ export default function Home() {
           <div className='main-container d-flex flex-column justify-content-between align-items-center gap-5'>
             {/*  style={{height: '800px'}} */}
             <div className='banner-video-container overflow-hidden m-0 p-0 w-100'>
-              <video style={{objectFit: 'cover'}} className='w-100 h-100 p-0 m-0' src='/res/bannervid.mp4' autoPlay muted />
+              <video style={{objectFit: 'cover'}} className='w-100 h-100 p-0 m-0' src='./res/bannervid.mp4' autoPlay muted />
             </div>
 
             {/* Introduction */}
