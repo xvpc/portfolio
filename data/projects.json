@@ -3,18 +3,12 @@
         "name": "Tp Anime",
         "link": "https://tpanime.com",
         "image": "https://i.ibb.co/kh95qFj/home.png",
-        "repo": "unknown"
+        "repo": "https://github.com/xvpc/tpanime"
     },
     {
-        "name": "Tp Anime",
-        "link": "https://tpanime.com",
-        "image": "https://i.ibb.co/kh95qFj/home.png",
-        "repo": "unknown"
-    },
-    {
-        "name": "Tp Anime",
-        "link": "https://tpanime.com",
-        "image": "https://i.ibb.co/kh95qFj/home.png",
-        "repo": "unknown"
+        "name": "Template",
+        "link": "https://xvpc.github.io/temp-css-html",
+        "image": "https://i.ibb.co/nf1m8rD/template.png",
+        "repo": "https://github.com/xvpc/temp-css-html"
     }
 ]
