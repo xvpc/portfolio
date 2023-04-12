@@ -114,7 +114,7 @@ export default function Home() {
           <div className='main-container d-flex flex-column justify-content-between align-items-center gap-5'>
             {/*  style={{height: '800px'}} */}
             <div className='banner-video-container overflow-hidden m-0 p-0 w-100'>
-              <video style={{objectFit: 'cover'}} className='w-100 h-100 p-0 m-0' src='/res/bannervid.mp4' autoPlay muted />
+              <video style={{objectFit: 'cover'}} className='w-100 h-100 p-0 m-0' src='../public/res/bannervid.mp4' autoPlay muted />
             </div>
 
             {/* Introduction */}
