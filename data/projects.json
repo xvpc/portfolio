@@ -2,7 +2,7 @@
     {
         "name": "Tp Anime",
         "link": "https://tpanime.com",
-        "image": "https://i.ibb.co/kh95qFj/home.png",
+        "image": "https://i.ibb.co/RCZPnPT/tpanime.png",
         "repo": "https://github.com/xvpc/tpanime"
     },
     {
@@ -10,5 +10,11 @@
         "link": "https://xvpc.github.io/temp-css-html",
         "image": "https://i.ibb.co/nf1m8rD/template.png",
         "repo": "https://github.com/xvpc/temp-css-html"
+    },
+    {
+        "name": "Memory Game",
+        "link": "https://xvpc.github.io/memory-game",
+        "image": "https://i.ibb.co/jGykHCD/memory-game.png",
+        "repo": "https://github.com/xvpc/memory-game"
     }
 ]
