@@ -80,7 +80,7 @@ export default function Home() {
       <Head>
           <title>Viper - Mahmoud</title>
         <meta name="title" content='Viper - Mahmoud' />
-        <meta name="description" content="A Software engineer / Web developer. I Enjoy Coding and Programming in general, but I shine more in Frontend development." />
+        <meta name="description" content="Hello, my name is Mahmoud Nabil or you may also know me as 'Viper'. I'm A Software engineer/web developer with +4 years of experience. I Enjoy Coding and Programming, but I shine more in Frontend development." />
         <meta name="keywords" content='viper, mahmoud, dev, programmer, programming, developer, website, portfolio, fiverr, discord, github, project, anime, whatsapp, react, freelancer, front end, back end, full stack, software engineer, custom website, animation, html, css, javascript, nextjs, bootstrap, company, IT' />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
