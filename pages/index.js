@@ -75,12 +75,32 @@ export default function Home() {
     }
   })
 
+  // Banner Parallax
+  useEffect(() => {
+    const bannerImage = document.querySelector('.banner-image')
+    const handleScroll = () => {
+        if(typeof window !== 'undefined'){
+            const {scrollY} = window
+            // console.log(scrollY)
+            if(scrollY <= 100){
+              bannerImage.classList.remove('banner-scrolled')
+            }else{
+              bannerImage.classList.add('banner-scrolled')
+            }
+        }
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+        window.removeEventListener('scroll', handleScroll)
+    }
+}, [])
+
   return (
     <>
       <Head>
           <title>Viper - Mahmoud</title>
         <meta name="title" content='Viper - Mahmoud' />
-        <meta name="description" content="Hello, my name is Mahmoud Nabil or you may also know me as 'Viper'. I'm A Software engineer/web developer with +4 years of experience. I Enjoy Coding and Programming, but I shine more in Frontend development." />
+        <meta name="description" content="Hello, my name is Mahmoud Nabil you may also know me as 'Viper'. I'm A Software engineer/web developer with +4 years of experience. I Enjoy Coding and Programming, but I shine more in Frontend development." />
         <meta name="keywords" content='viper, mahmoud, dev, programmer, programming, developer, website, portfolio, fiverr, discord, github, project, anime, whatsapp, react, freelancer, front end, back end, full stack, software engineer, custom website, animation, html, css, javascript, nextjs, bootstrap, company, IT' />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -113,8 +133,9 @@ export default function Home() {
         <main className='container-fluid px-0 mb-auto'>
           <div className='main-container d-flex flex-column justify-content-between align-items-center gap-5'>
             {/*  style={{height: '800px'}} */}
-            <div className='banner-video-container overflow-hidden m-0 p-0 w-100'>
-              <video style={{objectFit: 'cover'}} className='w-100 h-100 p-0 m-0' src='./res/bannervid.mp4' autoPlay muted />
+            <div className='container-fluid banner-container overflow-hidden m-0 p-0'>
+              <Image style={{objectFit: 'cover'}} className='banner-image w-100 h-100 p-0 m-0' src={'/res/banner.png'} height='1080' width='1920' alt='banner image' />
+              {/* <video style={{objectFit: 'cover'}} className='banner-image w-100 h-100 p-0 m-0' src='./res/bannervid.mp4' autoPlay muted /> */}
             </div>
 
             {/* Introduction */}
