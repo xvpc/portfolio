@@ -48,7 +48,7 @@ export default function Home() {
     const timeOut = setTimeout(() => {
       introductionName.classList.remove('move-items-top')
       introductionSwiper.classList.remove('move-items-right')
-    }, 1000)
+    }, 300)
     return () => {
       clearTimeout(timeOut)
     }
@@ -74,26 +74,6 @@ export default function Home() {
       window.addEventListener('scroll', handleScroll, true)
     }
   })
-
-  // Banner Parallax
-  useEffect(() => {
-    const bannerImage = document.querySelector('.banner-image')
-    const handleScroll = () => {
-        if(typeof window !== 'undefined'){
-            const {scrollY} = window
-            // console.log(scrollY)
-            if(scrollY <= 100){
-              bannerImage.classList.remove('banner-scrolled')
-            }else{
-              bannerImage.classList.add('banner-scrolled')
-            }
-        }
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => {
-        window.removeEventListener('scroll', handleScroll)
-    }
-}, [])
 
   return (
     <>
@@ -132,11 +112,6 @@ export default function Home() {
 
         <main className='container-fluid px-0 mb-auto'>
           <div className='main-container d-flex flex-column justify-content-between align-items-center gap-5'>
-            {/*  style={{height: '800px'}} */}
-            <div className='container-fluid banner-container overflow-hidden m-0 p-0'>
-              <Image style={{objectFit: 'cover'}} className='banner-image w-100 h-100 p-0 m-0' src={'/res/banner.png'} height='1080' width='1920' alt='banner image' />
-              {/* <video style={{objectFit: 'cover'}} className='banner-image w-100 h-100 p-0 m-0' src='./res/bannervid.mp4' autoPlay muted /> */}
-            </div>
 
             {/* Introduction */}
             <div ref={introductionRefs} className='w-100 introduction-container' id='introduction'>
