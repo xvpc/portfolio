@@ -16,5 +16,11 @@
         "link": "https://xvpc.github.io/memory-game",
         "image": "https://i.ibb.co/jGykHCD/memory-game.png",
         "repo": "https://github.com/xvpc/memory-game"
+    },
+    {
+        "name": "TODO App",
+        "link": "https://xvpc.github.io/todo",
+        "image": "https://i.ibb.co/J3Y68hY/todo.png",
+        "repo": "https://github.com/xvpc/todo"
     }
 ]
