@@ -1,10 +1,7 @@
-## Swiper Images
-- https://unsplash.com/photos/5fNmWej4tAA
-- https://unsplash.com/photos/Mx0yDbKMPSk
-- https://unsplash.com/photos/ocAo7MwGfHY
+# Portfolio
+Demo [portfolio](https://xvpc.github.io/portfolio/)
 
-## Technology used
-
+## Technologies
 - HTML
 - CSS
 - JavaScript
@@ -13,5 +10,8 @@
 - ReactJs
 - NextJs
 
-## Demo
-https://xvpc.github.io/portfolio/
+## Disclaimer
+Swiper Images
+[unsplash.com](https://unsplash.com/photos/5fNmWej4tAA)
+[unsplash.com](https://unsplash.com/photos/Mx0yDbKMPSk)
+[unsplash.com](https://unsplash.com/photos/ocAo7MwGfHY)
