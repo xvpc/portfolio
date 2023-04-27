@@ -48,6 +48,7 @@ export default function Projects() {
         }
     }, [])
 
+    
     // 
     return (
         <div ref={projectsRefs} className='projects-container overflow-hidden container-fluid d-flex flex-column justify-content-center align-items-center gap-3' id='projects'>
