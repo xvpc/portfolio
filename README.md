@@ -10,6 +10,8 @@ Demo [portfolio](https://xvpc.github.io/portfolio/)
 - ReactJs
 - NextJs
 
+For libraries check package.json.
+
 ## Disclaimer
 Swiper Images
 [unsplash.com](https://unsplash.com/photos/5fNmWej4tAA)
