@@ -112,7 +112,7 @@ html {
 .skills-container,
 .projects-container,
 .contact-container{
-    padding: 100px 0;
+    padding: 150px 0;
     margin: 100px 0;
 }
 
@@ -120,6 +120,20 @@ html {
 .introduction-description,
 .introduction-image-container{
     transition: .9s;
+}
+.introduction-text-animation{
+    width: 0px;
+    font-size: 20px;
+    border-right: 2px solid white;
+    animation: move-text 5s steps(14) alternate infinite;
+}
+@keyframes move-text {
+    from{
+        width: 0px;
+    }
+    to{
+        width: 230px;
+    }
 }
 .introduction-image-shadow{
     background: var(--main-color-shadow);
@@ -148,6 +162,14 @@ html {
 .skills-description,
 .skills-list{
     transition: 1s;
+}
+.skills-list{
+    font-size: 10px;
+}
+@media screen and (min-width: 576px){
+    .skills-list{
+        font-size: 15px;
+    }
 }
 /* End Skills */
 

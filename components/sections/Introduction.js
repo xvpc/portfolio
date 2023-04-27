@@ -48,7 +48,7 @@ export default function Introduction() {
                 <div className='introduction-description move-items-bottom order-2 order-md-0 d-flex flex-column justify-content-center align-items-center align-items-md-start gap-2'>
                     <p className='p-0 m-0 fw-bold fs-4'>Hello, <span className='text-info'>I&#39;m</span></p>
                     <h1 className='fw-bolder text-info font-monospace'>Mahmoud Nabil</h1>
-                    <h4 className='ps-3 fw-bold'>Front-end Developer</h4>
+                    <h4 className='introduction-text-animation overflow-hidden text-nowrap ps-3 fw-bold'>Front-end Developer</h4>
                     <p style={{fontSize: '12px'}} className='w-75 text-center text-md-start p-0 m-0'>I&#39;m A Web developer. I Enjoy Coding and Programming, but I shine more in Frontend development.</p>
                     <Button onClick={() => document.querySelector('#skills').scrollIntoView({behavior: 'smooth'})} className='mt-3' variant="info">My Skills <MdKeyboardArrowDown /></Button>
                 </div>
