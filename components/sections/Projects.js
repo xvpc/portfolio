@@ -65,7 +65,7 @@ export default function Projects() {
                             <div key={name} style={{width: '250px', height: '200px'}} className='project-container move-items-bottom d-flex flex-column justify-content-center align-items-center rounded px-2 py-3 gap-2'>
                                 {loaded ?
                                 <Link className='rounded overflow-hidden shadow bg-dark' title={name || ''} href={link || '#'} target='_blank'>
-                                    <Image style={{objectFit: 'cover'}} className='img-fluid' src={image || '/images/placeholder2.png'} height='1080' width='1920' alt='Inroduction Image' />
+                                    <Image style={{objectFit: 'cover'}} className='img-fluid' src={image || './images/placeholder2.png'} height='1080' width='1920' alt='Project Images' />
                                 </Link> :
                                 <Placeholder className='rounded overflow-hidden h-100 w-100' as={'span'} animation="glow">
                                     <Placeholder className="w-100 h-100" lg={10} />
