@@ -56,7 +56,7 @@ export default function Introduction() {
                 <Tilt options={defaultOptions} style={{width: '250px', height: '250px'}} className='introduction-image-container move-items-top position-relative'>
                     <div className='introduction-image-shadow w-100 h-100 position-absolute'></div>
                     <div className='introduction-image-overlay w-100 h-100 start-50 translate-middle-x bg-info position-absolute'></div>
-                    <Image style={{objectFit: 'cover', height: '350px'}} className='introduction-image remove-selecting w-100 position-absolute bottom-0' src={'/images/me-photo.png'} height={720} width={1080} priority alt='Me Photo' />
+                    <img style={{objectFit: 'cover', height: '350px'}} className='introduction-image remove-selecting w-100 position-absolute bottom-0' src={'/images/me-photo.png'} height={720} width={1080} priority alt='Me Photo' />
                 </Tilt>
 
             </div>
