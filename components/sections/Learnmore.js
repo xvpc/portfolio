@@ -45,7 +45,7 @@ export default function Learnmore() {
             <h6 className='text-center p-0 m-0'>
                 Interested? Check out my Fiverr 
                 <Ripples className='mt-2 btn btn-success w-100'>
-                    <Link href='https://www.fiverr.com/xviper123' target='_blank' className='w-100 text-white text-center'><TbBrandFiverr className='fs-5 fw-bold' /></Link>
+                    <Link href='https://www.fiverr.com/s/8RYLjq' target='_blank' className='w-100 text-white text-center'><TbBrandFiverr className='fs-5 fw-bold' /></Link>
                 </Ripples>
             </h6>
         </div>
