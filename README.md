@@ -1,5 +1,6 @@
 # Portfolio
-Official Website [portfolio](https://xvpc.dev/)
+Official Website [https://xvpc.dev](https://xvpc.dev/)
+
 
 ## Technologies
 - HTML
@@ -11,6 +12,13 @@ Official Website [portfolio](https://xvpc.dev/)
 - NextJs
 
 For libraries check package.json.
+
+## Screenshots
+
+![site1 Image](./public/images/siteimgs/this/site1.png)
+![site2 Image](./public/images/siteimgs/this/site2.png)
+![site3 Image](./public/images/siteimgs/this/site3.png)
+
 
 ## Disclaimer
 Swiper Images
