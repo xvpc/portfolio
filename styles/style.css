@@ -30,19 +30,17 @@ a:hover{
     scroll-behavior: smooth;
 }
 ::-webkit-scrollbar-track {
-    border: 10px solid black;
-    border-radius: 10px;
+    border: 10px solid rgba(222, 222, 223, 0.678);
 }
 ::-webkit-scrollbar-thumb {
-    background-color: rgba(222, 222, 223, 0.678);
-    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.911);
 }
 ::-webkit-scrollbar-thumb:hover {
     opacity: 0.7;
 }
 /* for Firefox */
 html {
-    scrollbar-color: rgba(222, 222, 223, 0.678) black;
+    scrollbar-color: rgba(0, 0, 0, 0.911) rgba(222, 222, 223, 0.678);
 }
 /* End Scrollbar */
 
@@ -269,6 +267,8 @@ html {
 /* End AboutMe */
 
 /* Start Leran more */
+.upwork-button{background-color: #6fda44 !important;}
+.fiverr-button{background-color: #1DBF73 !important;}
 .list-group.list-group-numbered{
     gap: 0px;
     transition: all var(--main-transition);
