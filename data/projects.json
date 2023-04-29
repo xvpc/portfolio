@@ -22,5 +22,11 @@
         "link": "https://xvpc.github.io/todo",
         "image": "https://i.ibb.co/J3Y68hY/todo.png",
         "repo": "https://github.com/xvpc/todo"
+    },
+    {
+        "name": "Tic Tac Toe",
+        "link": "https://xvpc.github.io/tic-tac-toe",
+        "image": "https://i.ibb.co/PgkNB0Z/tic-tac-toe.png",
+        "repo": "https://github.com/xvpc/tic-tac-toe"
     }
 ]
