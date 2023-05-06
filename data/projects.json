@@ -6,6 +6,12 @@
         "repo": "https://github.com/xvpc/tpanime"
     },
     {
+        "name": "ShortenThis",
+        "link": "https://stul.site/",
+        "image": "https://i.ibb.co/L6LnW22/shortenthis.png",
+        "repo": "https://github.com/xvpc/shortenthis"
+    },
+    {
         "name": "Template",
         "link": "https://xvpc.github.io/temp-css-html",
         "image": "https://i.ibb.co/nf1m8rD/template.png",

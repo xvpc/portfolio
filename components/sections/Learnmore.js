@@ -44,7 +44,7 @@ export default function Learnmore() {
             </ol>
 
             <div className='d-flex flex-column justify-content-center align-items-center gap-2'>
-                <h6 className='text-center p-0 m-0'>Interested? Check out my Fiverr</h6>
+                <h6 className='text-center p-0 m-0'>Interested? You can find Me on Fiverr and Upwork</h6>
                 <div className='w-100 d-flex flex-row justify-content-center align-items-center gap-2 text-center'>
                     <Ripples className='fiverr-button p-0 m-0 btn btn-success w-50 justify-content-center align-items-center'>
                         <Link href='https://www.fiverr.com/s/8RYLjq' target='_blank' className='text-white text-center w-100 p-2'><TbBrandFiverr className='fs-5 fw-bold' /></Link>
