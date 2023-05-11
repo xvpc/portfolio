@@ -8,6 +8,9 @@ import AboutMe from './sections/Aboutme';
 import Skills from './sections/Skills';
 import ContactMe from './sections/Contact';
 
+// Icons
+import { BsArrowUpShort } from 'react-icons/bs';
+
 export default function Home() {
     const footerRefs = useRef()
 
@@ -52,9 +55,10 @@ export default function Home() {
             </main>
 
             <footer>
-                <div ref={footerRefs} id='footer' className='w-100 p-1 bg-black text-white'>
-                    <div className='footer-container text-secondary container d-flex flex-row justify-content-center align-items-center gap-3'>
-                        xvpc.dev &#169; {new Date().getFullYear()}
+                <div ref={footerRefs} id='footer' className='w-100 py-2 px-1 bg-black text-white'>
+                    <div className='footer-container text-secondary container d-flex flex-row justify-content-between align-items-center gap-3'>
+                        <BsArrowUpShort style={{cursor: 'pointer'}} className='opacity-hover text-white bg-info fs-4 rounded-circle p-1' title='Scroll up' onClick={() => document.querySelector('#navbar').scrollIntoView({behavior: 'smooth'})} />
+                        <span style={{fontSize: '12px'}}>xvpc.dev &#169; {new Date().getFullYear()}</span>
                     </div>
                 </div>
             </footer>
