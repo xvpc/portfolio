@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react'
 
 // Next
 import Image from 'next/image';
+import Link from 'next/link';
 
 // Liab
 import { Button } from 'react-bootstrap';
@@ -9,6 +10,10 @@ import { Tilt } from 'react-tilt'
 
 // Icons
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { BsDiscord } from "react-icons/bs";
+import { AiFillGithub } from '@react-icons/all-files/ai/AiFillGithub';
+import { AiFillLinkedin } from '@react-icons/all-files/ai/AiFillLinkedin';
+import { AiOutlineWhatsApp } from '@react-icons/all-files/ai/AiOutlineWhatsApp';
 
 export default function Introduction() {
     const introductionRefs = useRef()
@@ -50,6 +55,21 @@ export default function Introduction() {
                     <h1 className='fw-bolder text-info font-monospace'>Mahmoud Nabil</h1>
                     <h4 className='introduction-text-animation overflow-hidden text-nowrap ps-3 fw-bold'>Front-end Developer</h4>
                     <p style={{fontSize: '12px'}} className='w-75 text-center text-md-start p-0 m-0'>I&#39;m A Web developer. I Enjoy Coding and Programming, but I shine more in Frontend development.</p>
+                    <div className='introduction-links-container d-flex flex-row justify-content-center aglin-items-center gap-2'>
+                        <Link className='text-center fs-2 overflow-hidden' href="https://github.com/xvpc" target='_blank'>
+                            <AiFillGithub className='bg-white text-dark rounded-circle p-1' />
+                        </Link>
+                        <Link className='text-center fs-2 overflow-hidden' href="https://www.linkedin.com/in/mahmoud-nabil-52a031268" target='_blank'>
+                            <AiFillLinkedin className='bg-white text-dark rounded-circle p-1' />
+                        </Link>
+                        <Link className='text-center fs-2 overflow-hidden' href="https://wa.me/qr/HTX2QRGZ76ZML1" target='_blank'>
+                            <AiOutlineWhatsApp className='bg-white text-dark rounded-circle p-1' />
+                        </Link>
+                        <Link className='text-center fs-2 overflow-hidden' href="#" target='_blank'>
+                            <BsDiscord className='bg-white text-dark rounded-circle p-1' />
+                        </Link>
+                    </div>
+
                     <Button onClick={() => document.querySelector('#skills').scrollIntoView({behavior: 'smooth'})} className='mt-3' variant="info">My Skills <MdKeyboardArrowDown /></Button>
                 </div>
 
