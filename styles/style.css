@@ -157,7 +157,7 @@ html {
     -ms-clip-path: polygon(0% 0, 71% 0, 100% 0%, 100% 79%, 71% 100%, 29% 100%, 0 79%, 0 29%);
     clip-path: polygon(0% 0, 71% 0, 100% 0%, 100% 79%, 71% 100%, 29% 100%, 0 79%, 0 29%);
 }
-.introduction-links-container a:hover svg{background-color: var(--main-color) !important;}
+.introduction-links-container a:hover svg{background-color: var(--main-color) !important; border-radius: 0% !important; transition: var(--main-transition);}
 /* End Introduction */
 
 /* Start Skills */
