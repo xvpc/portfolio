@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 
-// Next
+// Nextjs
 import Image from 'next/image'
 import Link from 'next/link';
 
@@ -13,6 +13,9 @@ import { SlLink } from 'react-icons/sl'
 
 // Liab
 import Placeholder from 'react-bootstrap/Placeholder';
+
+// Animations
+import { motion } from "framer-motion"
 
 export default function Projects() {
     const projectsRefs = useRef()
@@ -48,6 +51,7 @@ export default function Projects() {
         }
     }, [])
 
+    const [hover, setHover] = useState(null)
     
     // 
     return (
@@ -59,13 +63,14 @@ export default function Projects() {
             </div>
             <div className='d-flex flex-row flex-wrap justify-content-center align-items-center gap-3'>
                 {
-                    projectData && projectData.map(items => {
+                    projectData && projectData.map((items) => {
                         const {name, image, link, repo} = items
                         
                         return(
-                            <div key={name} style={{width: '250px', height: '200px'}} className='project-container move-items-bottom d-flex flex-column justify-content-center align-items-center rounded px-2 py-3 gap-2'>
+                            <motion.div key={name} whileHover={() => setHover(name)} onHoverEnd={() => setHover(null)} style={{width: '250px', height: '200px',transition: '2s', zIndex: '1'}} className='project-container position-relative move-items-bottom d-flex flex-column justify-content-center align-items-center rounded px-2 py-3 gap-2'>
+                                <div style={{top: hover == name ? '0%' : '50%', width: hover == name ? '100%' : '0%', height: hover == name ? '100%' : '0%', zIndex: '-1', background: 'rgba(128, 128, 128, 0.349)', transition: 'var(--main-transition)'}} className='project-container-overlay position-absolute rounded'></div>
                                 {loaded ?
-                                <Link className='rounded overflow-hidden shadow bg-dark' title={name || ''} href={link || '#'} target='_blank'>
+                                <Link style={{transform: hover == name ? 'scale3d(1, 1, 1)' : 'scale3d(1.1, 1.1, 1)', transition: 'all 0.4s linear', cursor: "url('/images/cursor-pointer.png'), auto"}} className='rounded overflow-hidden shadow bg-dark' title={name || ''} href={link || '#'} target='_blank'>
                                     <img style={{objectFit: 'cover'}} className='img-fluid' src={image || './images/placeholder2.png'} height='1080' width='1920' alt='Project Images' />
                                 </Link> :
                                 <Placeholder className='rounded overflow-hidden h-100 w-100' as={'span'} animation="glow">
@@ -75,7 +80,7 @@ export default function Projects() {
                     
                                 <div style={{fontSize: '30px'}} className='w-100 d-flex flex-row justify-content-center align-items-center gap-2'>
                                     {loaded ?
-                                    <Link className='w-100 p-2 d-flex text-center align-items-center justify-content-center rounded' title={link || ''} href={link || '#'} target='_blank'>
+                                    <Link style={{opacity: hover == name ? '0.6' : '0', transform: hover == name ? 'translateY(0%)' : 'translateY(-100%)', zIndex: hover == name ? '1' : '-1', transition: 'var(--main-transition)', cursor: "url('/images/cursor-pointer.png'), auto"}} className='w-100 p-2 d-flex text-center align-items-center justify-content-center rounded' title={link || ''} href={link || '#'} target='_blank'>
                                         <SlLink />
                                     </Link> :
                                     <Placeholder className='w-100 p-2 d-flex text-center align-items-center justify-content-center rounded' as={'a'} animation="wave">
@@ -84,7 +89,7 @@ export default function Projects() {
                                     }
                     
                                     {loaded ?
-                                    <Link className={`text-white w-100 p-2 d-flex text-center align-items-center justify-content-center rounded`} title={repo || ''} href={repo || '#'} target='_blank'>
+                                    <Link style={{opacity: hover == name ? '0.6' : '0', transform: hover == name ? 'translateY(0%)' : 'translateY(-100%)', zIndex: hover == name ? '1' : '-1', transition: 'var(--main-transition)', cursor: "url('/images/cursor-pointer.png'), auto"}} className={`text-white w-100 p-2 d-flex text-center align-items-center justify-content-center rounded`} title={repo || ''} href={repo || '#'} target='_blank'>
                                         <AiFillGithub />
                                     </Link> :
                                     <Placeholder className='w-100 p-2 d-flex text-center align-items-center justify-content-center rounded' as={'a'} animation="wave">
@@ -92,7 +97,7 @@ export default function Projects() {
                                     </Placeholder>
                                     }
                                 </div>
-                            </div>
+                            </motion.div>
                         )
                     })
                 }

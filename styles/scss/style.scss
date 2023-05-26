@@ -9,6 +9,14 @@ $list-group-bg: rgb(0 0 0 / 38%);
 $list-group-border-color: none;
 $list-group-color: white;
 
+// 
+.list-group.list-group-numbered{
+    gap: 0px;
+    transition: all var(--main-transition);
+}
+.list-group.list-group-numbered:hover{
+    gap: 20px;
+}
 
 
 @import "../../node_modules/bootstrap/scss/bootstrap";

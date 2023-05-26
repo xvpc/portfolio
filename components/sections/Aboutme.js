@@ -55,7 +55,7 @@ export default function AboutMe() {
         <div ref={aboutMeRefs} className='container-fluid' id='about'>
             <div className='container py-5 overflow-hidden d-flex flex-column flex-md-row justify-content-between align-items-center gap-5'>
                 <div className='w-50 text-center d-flex flex-column justify-content-center align-items-center'>
-                    <h2 className='about-name move-items-top p-0 m-0 display-4 fw-bolder font-monospace'>About Me</h2>
+                    <h2 style={{filter: 'drop-shadow(8px 8px 15px var(--main-color))', transitionDuration: '1s', transitionDelay: '1s'}} className='about-name move-items-top p-0 m-0 display-4 fw-bolder font-monospace'>About Me</h2>
                 </div>
 
                 <Swiper
@@ -68,20 +68,21 @@ export default function AboutMe() {
                     aboutData && aboutData.map((items, index) => {
 
                     return(
-                        <SwiperSlide style={{background: `center / cover no-repeat ${items.color || 'rgba(30, 187, 235, 0.829)'} url(${items.image})`}} key={index} className={`about-swiper-card p-3 d-flex flex-column justify-content-center align-items-start gap-1`}>
-                        <h4 className='fw-bold border-bottom'>{items?.name}</h4>
-                        {loaded ?
-                        items?.button ? 
-                        <Button onClick={() => document.querySelector('#learn-more').scrollIntoView({behavior: 'smooth'})} 
-                        type='button' className='btn btn-info text-white'>Learn More <MdKeyboardArrowDown /></Button> :
-                        <p style={{fontSize: '12px'}}>{items?.description}</p>
-                        :
-                        <Placeholder className='w-75' as="p" animation="wave">
-                            <Placeholder xs={12} />
-                            <Placeholder xs={10} />
-                            <Placeholder xs={8} />
-                        </Placeholder>
-                        }
+                        <SwiperSlide style={{background: `center / cover no-repeat ${items.color || 'rgba(30, 187, 235, 0.829)'} url(${items.image})`}} key={index} className={`about-swiper-card position-relative p-3 d-flex flex-column justify-content-center align-items-start gap-1`}>
+                            <h4 className='fw-bold border-bottom'>{items?.name}</h4>
+                            {loaded ?
+                            items?.button ? 
+                            <Button style={{cursor: "url('/images/cursor-pointer.png'), auto"}} onClick={() => document.querySelector('#learn-more').scrollIntoView({behavior: 'smooth'})} 
+                            type='button' className='btn btn-info text-white'>Learn More <MdKeyboardArrowDown /></Button> :
+                            <p style={{fontSize: '12px'}}>{items?.description}</p>
+                            :
+                            <Placeholder className='w-75' as="p" animation="wave">
+                                <Placeholder xs={12} />
+                                <Placeholder xs={10} />
+                                <Placeholder xs={8} />
+                            </Placeholder>
+                            }
+                            <div style={{background: 'linear-gradient(to top, black, #00000000)', zIndex: '-1'}} className='position-absolute top-0 start-0 w-100 h-100'></div>
                         </SwiperSlide>
                     )
                     })

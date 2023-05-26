@@ -10,7 +10,7 @@ import { Button, Form, Spinner } from 'react-bootstrap';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-// 
+// Others
 import Ripples from 'react-ripples'
 
 export default function ContactMe() {
@@ -82,10 +82,10 @@ export default function ContactMe() {
 
             <Form ref={form} onSubmit={sendEmail} className='container d-flex flex-column justify-content-center align-items-center gap-2'>
                 <Form.Group className='w-100 d-flex flex-row justify-content-between align-items-center gap-3'>
-                    <Form.Control className='contact-form-input' minLength='1' type='text' id='name' name='user_name' placeholder='Your Name' />
-                    <Form.Control className='contact-form-input' type='email' id='email' name='user_email' placeholder='Email' />
+                    <Form.Control style={{background: '#0000004f', border: 'none', color: 'white'}} className='contact-form-input' minLength='1' type='text' id='name' name='user_name' placeholder='Your Name' />
+                    <Form.Control style={{background: '#0000004f', border: 'none', color: 'white'}} className='contact-form-input' type='email' id='email' name='user_email' placeholder='Email' />
                 </Form.Group>
-                <Form.Control className='contact-form-input' minLength='5' as='textarea' rows={8} id='message' name='message' placeholder='How I can help you?' />
+                <Form.Control style={{background: '#0000004f', border: 'none', color: 'white'}} className='contact-form-input' minLength='5' as='textarea' rows={8} id='message' name='message' placeholder='How I can help you?' />
 
                 {blocked ?
                 <Button className='user-select-none rounded-0 text-center' variant="secondary" disabled>
@@ -99,7 +99,7 @@ export default function ContactMe() {
                 </Button>
                 :
                 <Ripples>
-                    <Button className='rounded-0' type='submit' value='Send' variant='primary'>Send Message</Button>
+                    <Button style={{cursor: "url('/images/cursor-pointer.png'), auto"}} className='rounded-0' type='submit' value='Send' variant='primary'>Send Message</Button>
                 </Ripples>
                 }
             </Form>
