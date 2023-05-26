@@ -8,10 +8,12 @@ Official Website [https://xvpc.dev](https://xvpc.dev/)
 - JavaScript
 - BootStrap
 - Sass
+- Material-UI
+- Framer-Motion
 - ReactJs
 - NextJs
 
-For libraries check package.json.
+Check package.json.
 
 ## Screenshots
 
@@ -25,3 +27,8 @@ Swiper Images
 [unsplash.com](https://unsplash.com/photos/5fNmWej4tAA)
 [unsplash.com](https://unsplash.com/photos/Mx0yDbKMPSk)
 [unsplash.com](https://unsplash.com/photos/ocAo7MwGfHY)
+
+
+Cursor
+[flaticon.com](https://www.flaticon.com/free-icon/cursor_4610128?related_id=4610127&origin=search)
+[flaticon.com](https://www.flaticon.com/free-icon/add_982636?related_id=864380&origin=search)
