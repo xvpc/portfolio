@@ -8,9 +8,6 @@
     --overlay-color: #d1d7da86;
     --dark-color: #0000004f;
 }
-body{
-    cursor: url('../public/images/cursor.png'), auto;
-}
 *{
     font-family: var(--main-font);
 }
@@ -79,7 +76,6 @@ html {
 /* Start Navbar */
 .hover-effect{
     position: relative;
-    cursor: url('../public/images/cursor-pointer.png'), auto;
 }
 .hover-effect::after{
     content: '';
@@ -100,7 +96,6 @@ html {
 /* End Navbar */
 
 /* Start Main */
-.skills-container,
 .projects-container,
 .contact-container{
     background-color: var(--dark-color);

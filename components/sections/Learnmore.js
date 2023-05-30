@@ -47,10 +47,10 @@ export default function Learnmore() {
                 <h6 className='text-center p-0 m-0'>Interested? You can find Me on Fiverr and Upwork</h6>
                 <div className='w-100 d-flex flex-row justify-content-center align-items-center gap-2 text-center'>
                     <Ripples className='fiverr-button p-0 m-0 btn btn-success w-50 justify-content-center align-items-center'>
-                        <Link style={{cursor: "url('/images/cursor-pointer.png'), auto"}} href='https://www.fiverr.com/s/8RYLjq' target='_blank' className='text-white text-center w-100 p-2'><TbBrandFiverr className='fs-5 fw-bold' /></Link>
+                        <Link style={{cursor: "pointer"}} href='https://www.fiverr.com/s/8RYLjq' target='_blank' className='text-white text-center w-100 p-2'><TbBrandFiverr className='fs-5 fw-bold' /></Link>
                     </Ripples>
                     <Ripples className='upwork-button p-0 m-0 btn btn-success w-50 justify-content-center align-items-center'>
-                        <Link style={{cursor: "url('/images/cursor-pointer.png'), auto"}} href='https://www.upwork.com/services/product/development-it-a-responsive-landing-page-or-e-commerce-website-1648754715831648256?ref=project_share' target='_blank' className='text-white text-center w-100 p-2'><SiUpwork className='fs-5 fw-bold' /></Link>
+                        <Link style={{cursor: "pointer"}} href='https://www.upwork.com/services/product/development-it-a-responsive-landing-page-or-e-commerce-website-1648754715831648256?ref=project_share' target='_blank' className='text-white text-center w-100 p-2'><SiUpwork className='fs-5 fw-bold' /></Link>
                     </Ripples>
                 </div>
             </div>

@@ -99,7 +99,7 @@ export default function ContactMe() {
                 </Button>
                 :
                 <Ripples>
-                    <Button style={{cursor: "url('/images/cursor-pointer.png'), auto"}} className='rounded-0' type='submit' value='Send' variant='primary'>Send Message</Button>
+                    <Button style={{cursor: "pointer"}} className='rounded-0' type='submit' value='Send' variant='primary'>Send Message</Button>
                 </Ripples>
                 }
             </Form>

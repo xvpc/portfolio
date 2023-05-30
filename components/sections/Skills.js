@@ -52,7 +52,7 @@ export default function Skills() {
                 <div style={{transition: '1s'}} className='skills-description move-items-top d-flex flex-column justify-content-center align-items-center align-items-md-start gap-3'>
                     <h2 className='text-info fw-bold display-5'>My Skills</h2>
                     <p style={{fontSize: '14px'}} className='w-75 text-center text-md-start p-0 m-0 '>Some Skills and Technologies that I master.</p>
-                    <Button style={{cursor: "url('/images/cursor-pointer.png'), auto"}} onClick={() => document.querySelector('#projects').scrollIntoView({behavior: 'smooth'})} variant="success">Projects <MdKeyboardArrowDown /></Button>
+                    <Button style={{cursor: "pointer"}} onClick={() => document.querySelector('#projects').scrollIntoView({behavior: 'smooth'})} variant="success">Projects <MdKeyboardArrowDown /></Button>
                 </div>
 
                 <div style={{maxWidth: '420px', transition: '1s', fontSize: matchSm ? '15px' : '10px'}} className='skills-list flex-wrap w-100 move-items-bottom d-flex flex-row justify-content-center align-items-center gap-2'>
