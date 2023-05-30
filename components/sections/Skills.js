@@ -46,7 +46,7 @@ export default function Skills() {
     const matchSm = useMediaQuery('(min-width: 576px)')
 
     return (
-        <div ref={skillsRefs} className='container-fluid skills-container' id='skills'>
+        <div ref={skillsRefs} className='container-fluid skills-container border-top border-secondary border-opacity-50' id='skills'>
             <div className='container overflow-hidden d-flex flex-column flex-md-row justify-content-between align-items-center py-5 rounded gap-5'>
 
                 <div style={{transition: '1s'}} className='skills-description move-items-top d-flex flex-column justify-content-center align-items-center align-items-md-start gap-3'>
