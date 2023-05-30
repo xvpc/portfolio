@@ -164,13 +164,13 @@ html {
 }
 /* End Projects */
 
-/* Start AboutMe */
-.about-name{
+/* Start Interested */
+.interested-name{
     filter: drop-shadow(8px 8px 15px var(--main-color));
     transition-duration: 1s;
     transition-delay: 1s;
 }
-.about-swiper{
+.interested-swiper{
     transition: 1s;
     animation: bounce-container 4s linear infinite;
 }
@@ -182,7 +182,7 @@ html {
         transform: translateY(10px);
     }
 }
-/* End AboutMe */
+/* End Interested */
 
 /* Start Leran more */
 .upwork-button{background-color: #6fda44 !important;}
