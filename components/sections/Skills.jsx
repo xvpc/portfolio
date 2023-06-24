@@ -26,7 +26,7 @@ export default function Skills() {
                 const {scrollY} = window
                 // console.log(scrollY)
                 // Skills
-                if(scrollY >= skillsRefs.current.clientHeight){
+                if(scrollY >= skillsRefs?.current?.clientHeight){
                     skillsDescription.classList.remove('move-items-top')
                     skillsList.classList.remove('move-items-bottom')
                 }
