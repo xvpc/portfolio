@@ -36,13 +36,14 @@ export default function Interested() {
             if(typeof window !== 'undefined'){
                 const {scrollY} = window
                 // interested
-                if(scrollY >= interestedRefs.current.scrollHeight){
+                if(scrollY >= interestedRefs?.current?.scrollHeight){
                     interestedName.classList.remove('move-items-top')
                     interestedSwiper.classList.remove('move-items-right')
-                }else{
-                    interestedName.classList.add('move-items-top')
-                    interestedSwiper.classList.add('move-items-right')
                 }
+                // else{
+                //     interestedName.classList.add('move-items-top')
+                //     interestedSwiper.classList.add('move-items-right')
+                // }
             }
         }
 

@@ -34,15 +34,16 @@ export default function Projects() {
                 const {scrollY} = window
                 // console.log('scrollY',scrollY)
                 // Projects
-                if(scrollY >= projectsRefs.current.clientHeight){
+                if(scrollY >= projectsRefs?.current?.clientHeight){
                     projectContainer.forEach((items) => {
                         items.classList.remove('move-items-bottom')
                     })
-                }else{
-                    projectContainer.forEach((items) => {
-                        items.classList.add('move-items-bottom')
-                    })
                 }
+                // else{
+                //     projectContainer.forEach((items) => {
+                //         items.classList.add('move-items-bottom')
+                //     })
+                // }
             }
         }
         window.addEventListener('scroll', handleScroll, true)

@@ -26,13 +26,14 @@ export default function Skills() {
                 const {scrollY} = window
                 // console.log(scrollY)
                 // Skills
-                if(scrollY >= skillsRefs.current.clientHeight){
+                if(scrollY >= skillsRefs?.current?.clientHeight){
                     skillsDescription.classList.remove('move-items-top')
                     skillsList.classList.remove('move-items-bottom')
-                }else{
-                    skillsDescription.classList.add('move-items-top')
-                    skillsList.classList.add('move-items-bottom')
                 }
+                // else{
+                //     skillsDescription.classList.add('move-items-top')
+                //     skillsList.classList.add('move-items-bottom')
+                // }
             }
         }
         window.addEventListener('scroll', handleScroll, true)

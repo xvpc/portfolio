@@ -27,10 +27,10 @@ a:hover{
     scroll-behavior: smooth;
 }
 ::-webkit-scrollbar-track {
-    border: 10px solid rgba(222, 222, 223, 0.678);
+    border: 2px solid black;
 }
 ::-webkit-scrollbar-thumb {
-    background-color: var(--main-color);
+    background-color: rgba(172, 172, 172, 0.64);
 }
 ::-webkit-scrollbar-thumb:hover {
     opacity: 0.7;
@@ -183,11 +183,6 @@ html {
     }
 }
 /* End Interested */
-
-/* Start Leran more */
-.upwork-button{background-color: #6fda44 !important;}
-.fiverr-button{background-color: #1DBF73 !important;}
-/* End Leran more */
 
 /* Start Contact */
 .contact-form-input::placeholder{

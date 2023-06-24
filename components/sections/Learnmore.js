@@ -46,11 +46,11 @@ export default function Learnmore() {
             <div className='d-flex flex-column justify-content-center align-items-center gap-2'>
                 <h6 className='text-center p-0 m-0'>Interested? You can find Me on Fiverr and Upwork</h6>
                 <div className='w-100 d-flex flex-row justify-content-center align-items-center gap-2 text-center'>
-                    <Ripples className='fiverr-button p-0 m-0 btn btn-success w-50 justify-content-center align-items-center'>
-                        <Link style={{cursor: "pointer"}} href='https://www.fiverr.com/s/8RYLjq' target='_blank' className='text-white text-center w-100 p-2'><TbBrandFiverr className='fs-5 fw-bold' /></Link>
+                    <Ripples className='p-0 m-0 btn w-50 justify-content-center align-items-center'>
+                        <Link style={{cursor: "pointer", background: '#1DBF73'}} href='https://www.fiverr.com/s/8RYLjq' target='_blank' className='text-white text-center w-100 p-2'><TbBrandFiverr className='fs-5 fw-bold' /></Link>
                     </Ripples>
-                    <Ripples className='upwork-button p-0 m-0 btn btn-success w-50 justify-content-center align-items-center'>
-                        <Link style={{cursor: "pointer"}} href='https://www.upwork.com/services/product/development-it-a-responsive-landing-page-or-e-commerce-website-1648754715831648256?ref=project_share' target='_blank' className='text-white text-center w-100 p-2'><SiUpwork className='fs-5 fw-bold' /></Link>
+                    <Ripples className='p-0 m-0 btn w-50 justify-content-center align-items-center'>
+                        <Link style={{cursor: "pointer", background: '#6fda44'}} href='https://www.upwork.com/services/product/development-it-a-responsive-landing-page-or-e-commerce-website-1648754715831648256?ref=project_share' target='_blank' className='text-white text-center w-100 p-2'><SiUpwork className='fs-5 fw-bold' /></Link>
                     </Ripples>
                 </div>
             </div>
