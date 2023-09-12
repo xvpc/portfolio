@@ -10,14 +10,17 @@ import { Button, Form, Spinner } from 'react-bootstrap';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+// Framer motion
+import { motion } from 'framer-motion'
+
 // Others
 import Ripples from 'react-ripples'
 
-export default function ContactMe() {
-    const form = useRef()
+export default function ContactUs() {
+    const form = useRef<any>()
 
     // Toastify
-    const toastifyError = (error) => 
+    const toastifyError = (error: string) => 
     toast.error(String(error || 'Something went Wrong!'), {
         position: "bottom-center",
         autoClose: 5000,
@@ -29,7 +32,7 @@ export default function ContactMe() {
         theme: "dark",
     })
 
-    const toastifySuccess = (result) => 
+    const toastifySuccess = (results: string) => 
     toast.success('Message Sent Successfully', {
         position: "bottom-center",
         autoClose: 5000,
@@ -45,14 +48,14 @@ export default function ContactMe() {
     const [emailsCount, setEmailsCount] = useState(0)
     const [loadingButton, setLoadingButton] = useState(false)
 
-    const sendEmail = (e) => {
+    const sendEmail = (e: any) => {
         e.preventDefault()
         if(e.target[1].value){
             setLoadingButton(true)
             setEmailsCount(prev => prev + 1)
 
-            emailjs.sendForm(process.env.NEXT_PUBLIC_SERVICE_ID, process.env.NEXT_PUBLIC_TEMPLATE_ID, form.current, process.env.NEXT_PUBLIC_PUBLIC_KEY)
-            .then((result) => {
+            emailjs.sendForm(process.env.NEXT_PUBLIC_SERVICE_ID as string, process.env.NEXT_PUBLIC_TEMPLATE_ID as string, form.current, process.env.NEXT_PUBLIC_PUBLIC_KEY as string)
+            .then((result: any[any]) => {
                 console.log(result.text)
                 toastifySuccess(result.text)
                 setLoadingButton(false)
@@ -77,29 +80,35 @@ export default function ContactMe() {
 
     // 
     return (
-        <div className='contact-container mb-0 container-fluid d-flex flex-column text-center justify-content-center align-items-center gap-3' id='contact-me'>
-            <h2 className='hover-effect text-info fw-bold text-uppercase'>Contact Me</h2>
+        <motion.div 
+        id='contact-us'
+        className='extra-space bg-black bg-opacity-25 mb-0 container-fluid d-flex flex-column text-center justify-content-center align-items-center gap-3' 
+        initial={{opacity: 0}}
+        whileInView={{opacity: 1}}
+        transition={{duration: 1.2}}
+        >
+            <h2 className='hover-effect text-info fw-bold text-uppercase'>Contact Us</h2>
 
             <Form ref={form} onSubmit={sendEmail} className='container d-flex flex-column justify-content-center align-items-center gap-2'>
                 <Form.Group className='w-100 d-flex flex-row justify-content-between align-items-center gap-3'>
-                    <Form.Control style={{background: '#0000004f', border: 'none', color: 'white'}} className='contact-form-input' minLength='1' type='text' id='name' name='user_name' placeholder='Your Name' />
-                    <Form.Control style={{background: '#0000004f', border: 'none', color: 'white'}} className='contact-form-input' type='email' id='email' name='user_email' placeholder='Email' />
+                    <Form.Control style={{background: '#0000004f', border: 'none', color: 'white'}} className='contact-form-input fw-bold' minLength={1} type='text' id='name' name='user_name' placeholder='Your Name' />
+                    <Form.Control style={{background: '#0000004f', border: 'none', color: 'white'}} className='contact-form-input fw-bold' type='email' id='email' name='user_email' placeholder='Email' />
                 </Form.Group>
-                <Form.Control style={{background: '#0000004f', border: 'none', color: 'white'}} className='contact-form-input' minLength='5' as='textarea' rows={8} id='message' name='message' placeholder='How I can help you?' />
+                <Form.Control style={{background: '#0000004f', border: 'none', color: 'white'}} className='contact-form-input fw-bold' minLength={5} as='textarea' rows={8} id='message' name='message' placeholder='How can I help you?' />
 
                 {blocked ?
-                <Button className='user-select-none rounded-0 text-center' variant="secondary" disabled>
+                <Button className='user-select-none rounded text-center' variant="secondary" disabled>
                     Blocked
                 </Button>
                 :
                 loadingButton ?
-                <Button className='user-select-none rounded-0 text-center d-flex flex-row justify-content-center align-items-center gap-2' variant="secondary" disabled>
+                <Button className='user-select-none rounded text-center d-flex flex-row justify-content-center align-items-center gap-2' variant="secondary" disabled>
                     Send Message
                     <Spinner size='sm' animation='border' variant='primary' /> 
                 </Button>
                 :
                 <Ripples>
-                    <Button style={{cursor: "pointer"}} className='rounded-0' type='submit' value='Send' variant='primary'>Send Message</Button>
+                    <Button style={{cursor: "pointer"}} className='rounded' type='submit' value='Send' variant='primary'>Send Message</Button>
                 </Ripples>
                 }
             </Form>
@@ -117,6 +126,6 @@ export default function ContactMe() {
             pauseOnHover
             theme='light'
             />
-        </div>
+        </motion.div>
     )
 }

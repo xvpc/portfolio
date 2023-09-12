@@ -6,7 +6,7 @@ import Learnmore from './sections/Learnmore';
 import Projects from './sections/Projects';
 import Interested from './sections/Interested';
 import Skills from './sections/Skills';
-import ContactMe from './sections/Contact';
+import ContactUs from './sections/Contact';
 
 // Mui
 import { CircularProgress } from '@mui/material';
@@ -15,10 +15,10 @@ import { CircularProgress } from '@mui/material';
 export default function Home() {
     const [loaded, setLoaded] = useState(false)
     useEffect(() => {
-        let timeOut
+        let timeOut: ReturnType<typeof setTimeout>;
         timeOut = setTimeout(() => {
             setLoaded(true)
-        }, 1000)
+        }, 400)
         
         return () => {
             clearTimeout(timeOut)
@@ -46,7 +46,7 @@ export default function Home() {
                 <Learnmore />
 
                 {/* Contact Me */}
-                <ContactMe />
+                <ContactUs />
             </> :
             <CircularProgress className='m-5' color="info" />
             }

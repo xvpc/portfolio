@@ -34,5 +34,11 @@
         "link": "https://xvpc.github.io/tic-tac-toe",
         "image": "https://i.ibb.co/PgkNB0Z/tic-tac-toe.png",
         "repo": "https://github.com/xvpc/tic-tac-toe"
+    },
+    {
+        "name": "Animations",
+        "link": "https://xvpc.github.io/animations",
+        "image": "https://i.ibb.co/WVWZW8C/animations.png",
+        "repo": "https://github.com/xvpc/animations"
     }
 ]

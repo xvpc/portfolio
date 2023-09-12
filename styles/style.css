@@ -53,23 +53,33 @@ html {
     transition: 0.3s;
     opacity: .6;
 }
-.move-items-top{
-    transform: translateY(-1000px) rotate(90deg);
-    opacity: 0;
+.hover-black:hover{background: #000;}
+.space{
+    padding: 150px 0;
 }
-.move-items-bottom{
-    transform: translateY(1000px) rotate(90deg);
-    opacity: 0;
+.extra-space{
+    padding: 150px 0;
+    margin: 100px 0;
 }
-.move-items-right{
-    translate: 1000px;
-    rotate: 90deg;
-    opacity: 0;
+.bottom-pattren-box{
+    --mask:
+    radial-gradient(54.08px at 50% calc(100% - 75.00px),#000 99%,#0000 101%) calc(50% - 60px) 0/120px 100%,
+    radial-gradient(54.08px at 50% calc(100% + 45.00px),#0000 99%,#000 101%) 50% calc(100% - 30px)/120px 100% repeat-x;
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
 }
-.move-items-left{
-    translate: -1000px;
-    rotate: 90deg;
-    opacity: 0;
+.top-bottom-pattren-box{
+    --mask:
+        radial-gradient(54.08px at 50% 75.00px,#000 99%,#0000 101%) calc(50% - 60px) 0/120px 51% repeat-x,
+        radial-gradient(54.08px at 50% -45px,#0000 99%,#000 101%) 50% 30px/120px calc(51% - 30px) repeat-x,
+        radial-gradient(54.08px at 50% calc(100% - 75.00px),#000 99%,#0000 101%) calc(50% - 60px) 100%/120px 51% repeat-x,
+        radial-gradient(54.08px at 50% calc(100% + 45.00px),#0000 99%,#000 101%) 50% calc(100% - 30px)/120px calc(51% - 30px) repeat-x;
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
+}
+.night-bg{
+    background-color: #1b2845;
+    background-image: linear-gradient(315deg, #1b2845 0%, #274060 74%);
 }
 /* End Custom Classes */
 
@@ -84,7 +94,7 @@ html {
     left: 0;
     width: 0%;
     height: 2px;
-    background: black;
+    background: white;
     transition: var(--main-transition);
 }
 .hover-effect:hover{
@@ -96,26 +106,7 @@ html {
 /* End Navbar */
 
 /* Start Main */
-.projects-container,
-.contact-container{
-    background-color: var(--dark-color);
-}
-.introduction-container,
-.learn-container{
-    padding: 150px 0;
-}
-.skills-container,
-.projects-container,
-.contact-container{
-    padding: 150px 0;
-    margin: 100px 0;
-}
-
 /* Start Introduction */
-.introduction-description,
-.introduction-image-container{
-    transition: .9s;
-}
 .introduction-text-animation{
     width: 0px;
     animation: move-text 5s steps(14) alternate infinite;
@@ -144,49 +135,9 @@ html {
 .introduction-links-container a:hover svg{background-color: var(--main-color) !important; border-radius: 0% !important; transition: var(--main-transition);}
 /* End Introduction */
 
-/* Start Projects */
-.projects-arrow{
-    animation: move-arrow 1.5s linear infinite;
-}
-@keyframes move-arrow {
-    0%, 10%, 20%, 50%, 80%, 100%{
-        transform: translateY(0);
-    }
-    40%, 60%{
-        transform: translateY(-5px);
-    }
-
-}
-
-.project-container div a:hover{
-    opacity: 1;
-    background: #000;
-}
-/* End Projects */
-
-/* Start Interested */
-.interested-name{
-    filter: drop-shadow(8px 8px 15px var(--main-color));
-    transition-duration: 1s;
-    transition-delay: 1s;
-}
-.interested-swiper{
-    transition: 1s;
-    animation: bounce-container 4s linear infinite;
-}
-@keyframes bounce-container {
-    0%,100%{
-        transform: translateY(-10px);
-    }
-    50%{
-        transform: translateY(10px);
-    }
-}
-/* End Interested */
-
 /* Start Contact */
 .contact-form-input::placeholder{
-    color: rgba(245, 245, 245, 0.582) !important;
+    color: rgba(245, 245, 245, 0.826) !important;
 }
 /* End Contact */
 /* End Main */

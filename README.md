@@ -1,13 +1,13 @@
 # Portfolio
-Official Website [https://xvpc.dev](https://xvpc.dev/)
+Official Website [xvpc.dev](https://xvpc.dev/)
 
 
 ## Technologies
 - HTML
 - CSS
-- JavaScript
+- JavaScript/TypeScript
 - BootStrap
-- Sass
+- Scss
 - Material-UI
 - Framer-Motion
 - ReactJs
