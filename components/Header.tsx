@@ -12,8 +12,8 @@ export default function Header() {
         <header>
             <nav className='container-fluid shadow-sm py-3 bg-black bg-opacity-75' id='navbar'>
                 <div className='align-center container d-flex flex-row flex-wrap justify-content-center justify-content-sm-between algin-items-center text-center gap-sm-4 gap-5'>
-                    <Link href="/" title='Go Home' className='rounded overflow-hidden'>
-                        <ImageHolder image={'./favicon/favicon-32x32.png'} title='Site Icon' />
+                    <Link href="/" title='Go Home' style={{width: 30, height: 30}} className='rounded overflow-hidden'>
+                        <ImageHolder image={'./favicon/android-chrome-512x512.png'} title='Site Icon' />
                     </Link>
                     <div style={{transition: 'var(--main-transition)', fontSize: '14px'}} className='d-flex flex-row flex-wrap justify-content-center justify-content-md-end align-items-center gap-3'>
                         <span style={{cursor: 'pointer'}} onClick={() => document?.querySelector('#introduction')?.scrollIntoView({behavior: 'smooth'})} className={`text-white hover-effect d-flex flex-row justify-content-center align-items-center gap-1 fw-bold`}>Introduction</span>
