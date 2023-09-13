@@ -29,7 +29,7 @@ export default function Interested() {
     
 
     return (
-        <div 
+        <section 
         id='interested'
         className='container-fluid border-bottom border-1 border-secondary border-opacity-25' 
         >
@@ -85,6 +85,6 @@ export default function Interested() {
                     </Swiper>
                 </motion.div>
             </motion.div>
-        </div>
+        </section>
     )
 }

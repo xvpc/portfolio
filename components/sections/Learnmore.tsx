@@ -17,7 +17,7 @@ export default function Learnmore() {
     const [activeHover, setActiveHover] = useState(false);
 
     return (
-        <div 
+        <section 
         id='learn-more'
         className='space container d-flex flex-column text-center justify-content-center align-items-center gap-3' 
         >
@@ -69,6 +69,6 @@ export default function Learnmore() {
                 </div>
             </div>
             
-        </div>
+        </section>
     )
 }

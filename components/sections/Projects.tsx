@@ -31,7 +31,7 @@ export default function Projects() {
     
     // 
     return (
-        <div 
+        <section 
         id='projects'
         className='extra-space bg-black bg-opacity-75 top-bottom-pattren-box overflow-hidden container-fluid d-flex flex-column justify-content-center align-items-center gap-3' 
         >
@@ -102,6 +102,6 @@ export default function Projects() {
                     })
                 }
             </div>
-        </div>
+        </section>
     )
 }

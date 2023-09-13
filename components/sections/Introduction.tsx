@@ -35,7 +35,10 @@ const defaultOptions = {
 export default function Introduction() {
 
     return (
-        <div className='container-fluid bottom-pattren-box bg-black bg-opacity-50' id='introduction'>
+        <section 
+        id='introduction'
+        className='container-fluid bottom-pattren-box bg-black bg-opacity-50' 
+        >
             <div className='space container overflow-hidden d-flex flex-column flex-md-row justify-content-between align-items-center gap-5'>
                 <motion.div 
                 className='order-2 order-md-0 d-flex flex-column justify-content-center align-items-center align-items-md-start gap-2'
@@ -81,6 +84,6 @@ export default function Introduction() {
                 </motion.div>
 
             </div>
-        </div>
+        </section>
     )
 }

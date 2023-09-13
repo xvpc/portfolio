@@ -18,7 +18,7 @@ export default function Skills() {
     const matchSm = useMediaQuery('(min-width: 576px)')
 
     return (
-        <motion.div 
+        <motion.section 
         id='skills'
         className='container-fluid extra-space' 
         onViewportEnter={() => setActiveView(true)}
@@ -59,6 +59,6 @@ export default function Skills() {
                     </ul>
                 </motion.div>
             </div>
-        </motion.div>
+        </motion.section>
     )
 }

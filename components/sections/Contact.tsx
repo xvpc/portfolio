@@ -80,7 +80,7 @@ export default function ContactUs() {
 
     // 
     return (
-        <motion.div 
+        <motion.section 
         id='contact-us'
         className='extra-space bg-black bg-opacity-25 mb-0 container-fluid d-flex flex-column text-center justify-content-center align-items-center gap-3' 
         initial={{opacity: 0}}
@@ -126,6 +126,6 @@ export default function ContactUs() {
             pauseOnHover
             theme='light'
             />
-        </motion.div>
+        </motion.section>
     )
 }
