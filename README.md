@@ -23,7 +23,13 @@ Check package.json.
 
 
 ## Disclaimer
-Swiper Images
+Swiper Images:
 [unsplash.com](https://unsplash.com/photos/5fNmWej4tAA)
 [unsplash.com](https://unsplash.com/photos/Mx0yDbKMPSk)
 [unsplash.com](https://unsplash.com/photos/ocAo7MwGfHY)
+
+Background:
+[eggradients.com](https://www.eggradients.com)
+
+CSS Patterns:
+[css-generators.com](https://css-generators.com)
