@@ -1,7 +1,9 @@
 ## Portfolio
-Official Website [xvpc.dev](https://xvpc.dev/)
+Official Website [xvpc.dev](https://xvpc.dev)
 
-<img src="./public/favicon/android-chrome-512x512.png" width="140" height="140" alt='Site Icon'>
+<a href="https://xvpc.dev">
+    <img src="./public/favicon/android-chrome-512x512.png" width="140" height="140" alt='Site Icon'>
+</a>
 
 
 ### Technologies
