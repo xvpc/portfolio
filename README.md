@@ -1,7 +1,7 @@
 ## Portfolio
 Official Website [xvpc.dev](https://xvpc.dev)
 
-<a href="https://xvpc.dev">
+<a href="https://xvpc.dev" target="_blank" title="https://xvpc.dev">
     <img src="./public/favicon/android-chrome-512x512.png" width="140" height="140" alt='Site Icon'>
 </a>
 
