@@ -40,5 +40,11 @@
         "link": "https://xvpc.github.io/animations",
         "image": "https://i.ibb.co/WVWZW8C/animations.png",
         "repo": "https://github.com/xvpc/animations"
+    },
+    {
+        "name": "Quick Recips",
+        "link": "https://quickrecipes.pages.dev",
+        "image": "https://i.ibb.co/Fg6btdy/quickrecipes.png",
+        "repo": "https://github.com/xvpc/quickrecipes"
     }
 ]
