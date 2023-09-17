@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 // Nextjs
 import Image from 'next/image';
@@ -15,8 +15,12 @@ import { MdKeyboardArrowDown, MdOutlineMailOutline } from "react-icons/md";
 import { BsDiscord } from "react-icons/bs";
 import { AiFillGithub, AiFillLinkedin, AiOutlineWhatsApp } from 'react-icons/ai';
 
+// Mui
+import { Tooltip } from '@mui/material';
+
 // Others
 import { Tilt } from 'react-tilt'
+
 
 
 // Tilt options
@@ -33,7 +37,25 @@ const defaultOptions = {
 }
 
 export default function Introduction() {
+    const titles = ["Software engineer","Front-end Developer", "Back-end Developer"];
+    const [title, setTitle] = useState("Software engineer")
+    
+    useEffect(() => {
+        let interval: NodeJS.Timer;
+        let time: number = 0;
 
+        interval = setInterval(() => {
+            setTitle(titles[time])
+            time = (time + 1) % titles.length
+        }, 10100)
+
+        return () => {
+            clearInterval(interval)
+        }
+    }, [])
+    
+    
+    // 
     return (
         <section 
         id='introduction'
@@ -48,24 +70,34 @@ export default function Introduction() {
                 >
                     <p className='p-0 m-0 fw-bold fs-4'>Hello, <span className='text-info'>I&#39;m</span></p>
                     <h1 className='fw-bolder text-info font-monospace'>Mahmoud Nabil</h1>
-                    <h4 style={{fontSize: '20px'}} className='introduction-text-animation border-end border-2 border-white overflow-hidden text-nowrap ps-3 fw-bold'>Front-end Developer</h4>
-                    <p style={{fontSize: '12px'}} className='w-75 text-center text-md-start p-0 m-0'>I&#39;m A Web developer. I Enjoy Coding and Programming, but I shine more in Frontend development.</p>
+                    <h4 style={{fontSize: '20px'}} className='introduction-text-animation border-end border-2 border-white overflow-hidden text-nowrap ps-3 fw-bold'>{title}</h4>
+                    <p style={{fontSize: '12px'}} className='w-75 text-center text-md-start p-0 m-0'>I&#39;m A Software engineer with +5 years of experience. I Enjoy Coding and Programming, but I shine more in Web development.</p>
                     <div className='introduction-links-container d-flex flex-row justify-content-center aglin-items-center gap-2'>
-                        <Link className='text-center fs-2 overflow-hidden' href={process.env.NEXT_PUBLIC_EMAIL as string} target='_blank'>
-                            <MdOutlineMailOutline className='bg-white text-dark rounded-circle p-1' />
-                        </Link>
-                        {/* <Link className='text-center fs-2 overflow-hidden' href={process.env.NEXT_PUBLIC_LINKEDIN as string} target='_blank'>
-                            <AiFillLinkedin className='bg-white text-dark rounded-circle p-1' />
-                        </Link> */}
-                        <Link className='text-center fs-2 overflow-hidden' href={process.env.NEXT_PUBLIC_WHATSAPP as string} target='_blank'>
-                            <AiOutlineWhatsApp className='bg-white text-dark rounded-circle p-1' />
-                        </Link>
-                        <Link className='text-center fs-2 overflow-hidden' href={process.env.NEXT_PUBLIC_GITHUB as string} target='_blank'>
-                            <AiFillGithub className='bg-white text-dark rounded-circle p-1' />
-                        </Link>
-                        <Link className='text-center fs-2 overflow-hidden' href={process.env.NEXT_PUBLIC_DISCORD as string} target='_blank'>
-                            <BsDiscord className='bg-white text-dark rounded-circle p-1' />
-                        </Link>
+                        <Tooltip title='Gmail' arrow>
+                            <Link className='text-center fs-2 overflow-hidden' href={process.env.NEXT_PUBLIC_EMAIL as string} target='_blank'>
+                                <MdOutlineMailOutline className='bg-white text-dark rounded-circle p-1' />
+                            </Link>
+                        </Tooltip>
+                        {/* <Tooltip title='Linkedin' arrow>
+                            <Link className='text-center fs-2 overflow-hidden' href={process.env.NEXT_PUBLIC_LINKEDIN as string} target='_blank'>
+                                <AiFillLinkedin className='bg-white text-dark rounded-circle p-1' />
+                            </Link>
+                        </Tooltip> */}
+                        <Tooltip title='WhatsApp' arrow>
+                            <Link className='text-center fs-2 overflow-hidden' href={process.env.NEXT_PUBLIC_WHATSAPP as string} target='_blank'>
+                                <AiOutlineWhatsApp className='bg-white text-dark rounded-circle p-1' />
+                            </Link>
+                        </Tooltip>
+                        <Tooltip title='Github' arrow>
+                            <Link className='text-center fs-2 overflow-hidden' href={process.env.NEXT_PUBLIC_GITHUB as string} target='_blank'>
+                                <AiFillGithub className='bg-white text-dark rounded-circle p-1' />
+                            </Link>
+                        </Tooltip>
+                        <Tooltip title='Discord' arrow>
+                            <Link className='text-center fs-2 overflow-hidden' href={process.env.NEXT_PUBLIC_DISCORD as string} target='_blank'>
+                                <BsDiscord className='bg-white text-dark rounded-circle p-1' />
+                            </Link>
+                        </Tooltip>
                     </div>
 
                     <Button style={{cursor: "pointer"}} onClick={() => document?.querySelector('#skills')?.scrollIntoView({behavior: 'smooth'})} className='mt-3' variant="info">My Skills <MdKeyboardArrowDown /></Button>

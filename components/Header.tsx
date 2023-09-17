@@ -21,7 +21,7 @@ export default function Header() {
                         <span style={{cursor: 'pointer'}} onClick={() => document?.querySelector('#projects')?.scrollIntoView({behavior: 'smooth'})} className={`text-white hover-effect d-flex flex-row justify-content-center align-items-center gap-1 fw-bold`}>Projects</span>
                         <span style={{cursor: 'pointer'}} onClick={() => document?.querySelector('#interested')?.scrollIntoView({behavior: 'smooth'})} className={`text-white hover-effect d-flex flex-row justify-content-center align-items-center gap-1 fw-bold`}>Interested?</span>
                         <span style={{cursor: 'pointer'}} onClick={() => document?.querySelector('#learn-more')?.scrollIntoView({behavior: 'smooth'})} className={`text-white hover-effect d-flex flex-row justify-content-center align-items-center gap-1 fw-bold`}>Learn More</span>
-                        <span style={{cursor: 'pointer'}} onClick={() => document?.querySelector('#contact-us')?.scrollIntoView({behavior: 'smooth'})} className={`text-white hover-effect d-flex flex-row justify-content-center align-items-center gap-1 fw-bold`}>Contact Us</span>
+                        <span style={{cursor: 'pointer'}} onClick={() => document?.querySelector('#contact-us')?.scrollIntoView({behavior: 'smooth'})} className={`text-white hover-effect d-flex flex-row justify-content-center align-items-center gap-1 fw-bold`}>Contact</span>
                     </div>
                 </div>
             </nav>

@@ -14,7 +14,6 @@ import { motion } from 'framer-motion'
 import Ripples from 'react-ripples'
 
 export default function Learnmore() {
-    const [activeHover, setActiveHover] = useState(false);
 
     return (
         <section 
@@ -26,10 +25,8 @@ export default function Learnmore() {
             <motion.ol 
             className="list-group list-group-numbered text-start w-100"
             initial={{rowGap: 0}}
-            onHoverStart={() => setActiveHover(true)}
-            onHoverEnd={() => setActiveHover(false)}
-            animate={activeHover ? {rowGap: "20px"} : {rowGap: 0}}
-            transition={{duration: 0.5}}
+            whileInView={{rowGap: "20px"}}
+            transition={{duration: 0.8, delay: 0.5}}
             >
                 <li className="list-group-item d-flex justify-content-between align-items-start">
                     <div className="me-auto">
@@ -58,7 +55,7 @@ export default function Learnmore() {
             </motion.ol>
 
             <div className='d-flex flex-column justify-content-center align-items-center gap-2'>
-                <h6 className='text-center p-0 m-0'>Interested? You can find Me on Fiverr and Upwork</h6>
+                <h6 className='text-center p-0 m-0'>Interested? You can find Me on Fiverr or Upwork</h6>
                 <div className='w-100 d-flex flex-row justify-content-center align-items-center gap-2 text-center'>
                     <Ripples className='p-0 m-0 btn w-50 justify-content-center align-items-center'>
                         <Link style={{cursor: "pointer", background: '#1DBF73'}} href={process.env.NEXT_PUBLIC_FIVERR as string} target='_blank' className='text-white text-center w-100 p-2'><TbBrandFiverr className='fs-5 fw-bold' /></Link>
