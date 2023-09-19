@@ -1,7 +1,7 @@
 import React from 'react'
 
 type ImageHolderProps = {
-    image: string | null,
+    image?: string | null,
     title?: string
 }
 

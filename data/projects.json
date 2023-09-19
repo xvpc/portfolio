@@ -3,48 +3,56 @@
         "name": "Tp Anime",
         "link": "https://tpanime.com",
         "image": "https://i.ibb.co/NpScXhB/home.png",
-        "repo": "https://github.com/xvpc/tpanime"
+        "repo": "https://github.com/xvpc/tpanime",
+        "description": "Tp Anime is A fully functional website that provides anime shows and movies and it is Free for everyone."
     },
     {
         "name": "ShortenThis",
         "link": "https://stul.site/",
         "image": "https://i.ibb.co/L6LnW22/shortenthis.png",
-        "repo": "https://github.com/xvpc/shortenthis"
+        "repo": "https://github.com/xvpc/shortenthis",
+        "description": "ShortenThis is a simple and easy Shorten URL Website, It allows you to shorten your long Link And gives you a QRCode for it And A Dashboard to track how many people Clicked your Link."
     },
     {
         "name": "Template",
         "link": "https://xvpc.github.io/temp-css-html",
         "image": "https://i.ibb.co/nf1m8rD/template.png",
-        "repo": "https://github.com/xvpc/temp-css-html"
+        "repo": "https://github.com/xvpc/temp-css-html",
+        "description": "Portfolio using only Css and Html."
     },
     {
         "name": "Memory Game",
         "link": "https://xvpc.github.io/memory-game",
         "image": "https://i.ibb.co/jGykHCD/memory-game.png",
-        "repo": "https://github.com/xvpc/memory-game"
+        "repo": "https://github.com/xvpc/memory-game",
+        "description": "Simple Memory game."
     },
     {
         "name": "TODO App",
         "link": "https://xvpc.github.io/todo",
         "image": "https://i.ibb.co/J3Y68hY/todo.png",
-        "repo": "https://github.com/xvpc/todo"
+        "repo": "https://github.com/xvpc/todo",
+        "description": "Todo app."
     },
     {
         "name": "Tic Tac Toe",
         "link": "https://xvpc.github.io/tic-tac-toe",
         "image": "https://i.ibb.co/PgkNB0Z/tic-tac-toe.png",
-        "repo": "https://github.com/xvpc/tic-tac-toe"
+        "repo": "https://github.com/xvpc/tic-tac-toe",
+        "description": "Tic tac toe game."
     },
     {
         "name": "Animations",
         "link": "https://xvpc.github.io/animations",
         "image": "https://i.ibb.co/WVWZW8C/animations.png",
-        "repo": "https://github.com/xvpc/animations"
+        "repo": "https://github.com/xvpc/animations",
+        "description": "A simple Nextjs Website that uses Framer-motion for testing animations and other features."
     },
     {
         "name": "Quick Recips",
         "link": "https://quickrecipes.pages.dev",
         "image": "https://i.ibb.co/Fg6btdy/quickrecipes.png",
-        "repo": "https://github.com/xvpc/quickrecipes"
+        "repo": "https://github.com/xvpc/quickrecipes",
+        "description": "A simple non-profit web application that helps with searching for Recipes/meals for personal needs or sharing them with others, It's made using Themealdb API."
     }
 ]

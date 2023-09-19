@@ -103,6 +103,11 @@ html {
 .hover-effect:hover::after{
     width: 100%;
 }
+.hover-container:hover{
+    color: whitesmoke !important;
+    background-color: var(--dark-color) !important;
+    transition: .4s;
+}
 /* End Navbar */
 
 /* Start Main */
