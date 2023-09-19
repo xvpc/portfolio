@@ -11,11 +11,11 @@ export const config = {
 export default async function handler(request: Request){
     const url = new URL(request.url);
 
-    const name = decodeURIComponent(url?.searchParams.get("name") || "");
-    const link = decodeURIComponent(url?.searchParams.get("link") || "");
-    const repo = decodeURIComponent(url?.searchParams.get("repo") || "");
-    const image = decodeURIComponent(url?.searchParams.get("image") || "");
-    const description = decodeURIComponent(url?.searchParams.get("description") || "");
+    const name = decodeURIComponent(url?.searchParams.get("name") || "") || null;
+    const link = decodeURIComponent(url?.searchParams.get("link") || "") || null;
+    const repo = decodeURIComponent(url?.searchParams.get("repo") || "") || null;
+    const image = decodeURIComponent(url?.searchParams.get("image") || "") || null;
+    const description = decodeURIComponent(url?.searchParams.get("description") || "") || null;
 
     // // const apiAuth = request.headers?.authorization
     // // if(apiAuth !== process.env.NEXT_PUBLIC_LOCAL_API_KEY){
@@ -23,7 +23,9 @@ export default async function handler(request: Request){
     // // }
 
     if(request.method === 'POST'){
-        // if(!name && !link && !repo && !image && !description) return Response.json({error: '/api/projects/create?name=projectname&link=projectlink&repo=projectrepo&description=projectdescription'});
+        if(!name && !link && !repo && !image && !description){
+            return new Response(JSON.stringify({ error: '/api/projects/create?name=projectname&link=projectlink&repo=projectrepo&description=projectdescription'}))
+        }
     
         // @ts-ignore
         const { DB } = (process.env as { DB: D1Database }); 
