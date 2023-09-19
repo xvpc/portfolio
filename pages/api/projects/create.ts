@@ -9,8 +9,9 @@ export const config = {
 
 
 export default async function handler(request: Request){
-    
-    // const url = new URL(request.url);
+    const url = new URL(request.url);
+    return new Response(JSON.stringify({ error: url ?? 'Something went wrong'}))
+
     // const name = decodeURIComponent(url?.searchParams.get("name") || "");
     // const link = decodeURIComponent(url?.searchParams.get("link") || "");
     // const repo = decodeURIComponent(url?.searchParams.get("repo") || "");
