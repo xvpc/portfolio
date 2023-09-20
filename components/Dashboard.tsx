@@ -1,7 +1,12 @@
-import { Button } from '@mui/material'
-import axios from 'axios';
 import React, { useState } from 'react'
 
+// Mui
+import { Button } from '@mui/material'
+
+// Fetch
+import axios from 'axios';
+
+// Bootstrap
 import { Form, Spinner } from 'react-bootstrap'
 
 // Toast
@@ -50,7 +55,6 @@ export default function Dashboard() {
             setInputError("Invalid Inputs")
         }else{
             setInputError("")
-            console.log(`${name} - ${link} - ${image} - ${repo} - ${description}`)
             const url = `https://xvpc.dev/api/projects/create?name=${name}&link=${link}&repo=${repo}&image=${image}&description=${description}&authorization=${process.env.NEXT_PUBLIC_API_KEY}`
 
             try{
@@ -75,7 +79,7 @@ export default function Dashboard() {
     return (
         <div className='px-2 py-4 vh-100 text-center overflow-hidden bg-black bg-opacity-50 d-flex flex-column justify-content-center algin-items-center gap-5'>
             <h2 className='text-white fw-bold text-truncate'>Create New Project</h2>
-            {process.env.NEXT_PUBLIC_API_KEY || "??"}
+            
             <Form onSubmit={handleSubmit} className='container d-flex flex-column justify-content-center align-items-center gap-4'>
                 <Form.Group className='d-flex flex-column justify-content-center align-items-center gap-3'>
                     <div className='d-flex flex-row flex-wrap flex-sm-nowrap justify-content-center align-items-center gap-3'>
@@ -84,7 +88,7 @@ export default function Dashboard() {
                         <Form.Control style={{background: '#0000004f', border: 'none', color: 'white'}} className='contact-form-input fw-normal' minLength={4} type='url' id='image' name='image' placeholder='project image' />
                         <Form.Control style={{background: '#0000004f', border: 'none', color: 'white'}} className='contact-form-input fw-normal' minLength={4} type='url' id='repo' name='repo' placeholder='project repository' />
                     </div>
-                    <Form.Control style={{background: '#0000004f', border: 'none', color: 'white'}} className='contact-form-input fw-normal' minLength={7} type='text' as='textarea' rows={8} id='description' name='description' placeholder='project description' />
+                    <Form.Control style={{background: '#0000004f', border: 'none', color: 'white', resize: "none"}} className='contact-form-input fw-normal' minLength={7} type='text' as='textarea' rows={8} id='description' name='description' placeholder='project description' />
                 </Form.Group>
                 
                 {

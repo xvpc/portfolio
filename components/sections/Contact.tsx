@@ -94,7 +94,7 @@ export default function ContactUs() {
                     <Form.Control style={{background: '#0000004f', border: 'none', color: 'white'}} className='contact-form-input fw-bold' minLength={1} type='text' id='name' name='user_name' placeholder='Your Name' />
                     <Form.Control style={{background: '#0000004f', border: 'none', color: 'white'}} className='contact-form-input fw-bold' type='email' id='email' name='user_email' placeholder='Email' />
                 </Form.Group>
-                <Form.Control style={{background: '#0000004f', border: 'none', color: 'white'}} className='contact-form-input fw-bold' minLength={5} as='textarea' rows={8} id='message' name='message' placeholder='How can I help you?' />
+                <Form.Control style={{background: '#0000004f', border: 'none', color: 'white', resize: "none"}} className='contact-form-input fw-bold' minLength={5} as='textarea' rows={8} id='message' name='message' placeholder='How can I help you?' />
 
                 {blocked ?
                 <Button className='user-select-none rounded text-center' variant="secondary" disabled>

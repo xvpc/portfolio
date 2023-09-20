@@ -7,10 +7,10 @@ export const config = {
 
 const headers = {
     'content-type': 'application/json',
-    "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Methods": "GET",
-    "Access-Control-Allow-Headers": "*",
-    "Origin": "*"
+    // "Access-Control-Allow-Origin": "*",
+    // "Access-Control-Allow-Methods": "GET",
+    // "Access-Control-Allow-Headers": "*",
+    // "Origin": "*"
 } 
 
 
