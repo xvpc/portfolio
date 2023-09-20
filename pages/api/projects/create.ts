@@ -21,6 +21,7 @@ export default async function handler(request: Request){
     const repo = decodeURIComponent(url?.searchParams.get("repo") || "") || null;
     const image = decodeURIComponent(url?.searchParams.get("image") || "") || null;
     const description = decodeURIComponent(url?.searchParams.get("description") || "") || null;
+    const apiKey = decodeURIComponent(url?.searchParams.get("authorization") || "") || null;
 
 
     if(request.method === 'POST'){
@@ -32,7 +33,6 @@ export default async function handler(request: Request){
         }
     
         
-        const apiKey = request.headers?.get('authorization') || '';
         if(apiKey !== process.env.NEXT_PUBLIC_API_KEY){
             return new Response(JSON.stringify({ error: 'Unauthorized User'}), {
                 status: 401,

@@ -51,13 +51,13 @@ export default function Dashboard() {
         }else{
             setInputError("")
             console.log(`${name} - ${link} - ${image} - ${repo} - ${description}`)
-            const url = `https://xvpc.dev/api/projects/create?name=${name}&link=${link}&repo=${repo}&image=${image}&description=${description}`
+            const url = `https://xvpc.dev/api/projects/create?name=${name}&link=${link}&repo=${repo}&image=${image}&description=${description}&authorization=${process.env.NEXT_PUBLIC_API_KEY}`
 
             try{
                 const { data } = await axios.post(url, {
-                    headers: {
-                        authorization: `${process.env.NEXT_PUBLIC_API_KEY}`,
-                    },
+                    // headers: {
+                    //     authorization: `${process.env.NEXT_PUBLIC_API_KEY}`,
+                    // },
                 })
                 if(data?.error){
                     toastifyError(data.error || "Something went wrong!")
