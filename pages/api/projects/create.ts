@@ -21,8 +21,10 @@ export default async function handler(request: Request){
             return new Response(JSON.stringify({ error: '/api/projects/create?name=projectname&link=projectlink&repo=projectrepo&image=Projectimage&description=projectdescription'}))
         }
     
-        const apiKey = request.headers?.get("authorization") || ""
     
+        
+        const apiKey = request.headers?.get('Authorization')?.split(' ')[1] ?? '';
+        
         if(apiKey !== process.env.NEXT_PUBLIC_API_KEY){
             return new Response(JSON.stringify({ error: 'Unauthorized User'}))
         }

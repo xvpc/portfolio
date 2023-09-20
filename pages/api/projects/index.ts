@@ -6,14 +6,16 @@ export const config = {
 }
 
 
-export default async function handler(){
-    // @ts-ignore
-    const { DB } = (process.env as { DB: D1Database }); 
-
-    try{
-        const { results } = await DB.prepare('SELECT * FROM Projects').bind().all();
-        return new Response(JSON.stringify({ results: results ?? null }))
-    }catch(err: any){
-        return new Response(JSON.stringify({ error: err.message ?? 'Something went wrong'}))
+export default async function handler(request: Request){
+    if(request.method === 'GET'){
+        // @ts-ignore
+        const { DB } = (process.env as { DB: D1Database }); 
+    
+        try{
+            const { results } = await DB.prepare('SELECT * FROM Projects').bind().all();
+            return new Response(JSON.stringify({ results: results ?? null }))
+        }catch(err: any){
+            return new Response(JSON.stringify({ error: err.message ?? 'Something went wrong'}))
+        }
     }
 }
