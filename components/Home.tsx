@@ -27,7 +27,7 @@ export default function Home() {
 
     // 
     return (
-        <div className='main-container d-flex flex-column justify-content-between align-items-center'>
+        <div className='d-flex flex-column justify-content-between align-items-center'>
             {loaded ?
             <>
                 {/* Introduction */}

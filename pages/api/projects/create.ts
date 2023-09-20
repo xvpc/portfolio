@@ -5,6 +5,9 @@ export const config = {
     runtime: 'edge',
 }
 
+const headers = {
+    'content-type': 'application/json',
+} 
 
 export default async function handler(request: Request){
     const url = new URL(request.url);
@@ -18,15 +21,19 @@ export default async function handler(request: Request){
 
     if(request.method === 'POST'){
         if(!name && !link && !repo && !image && !description){
-            return new Response(JSON.stringify({ error: '/api/projects/create?name=projectname&link=projectlink&repo=projectrepo&image=Projectimage&description=projectdescription'}))
+            return new Response(JSON.stringify({ error: '/api/projects/create?name=projectname&link=projectlink&repo=projectrepo&image=Projectimage&description=projectdescription'}), {
+                status: 400,
+                headers,
+            })
         }
-    
     
         
         const apiKey = request.headers?.get('Authorization')?.split(' ')[1] ?? '';
-        
         if(apiKey !== process.env.NEXT_PUBLIC_API_KEY){
-            return new Response(JSON.stringify({ error: 'Unauthorized User'}))
+            return new Response(JSON.stringify({ error: 'Unauthorized User'}), {
+                status: 401,
+                headers,
+            })
         }
 
         // @ts-ignore
@@ -34,9 +41,15 @@ export default async function handler(request: Request){
     
         try{
             const { success } = await DB.prepare('INSERT INTO Projects (name, link, repo, image, description) VALUES (?1,?2 ,?3 ,?4 ,?5 );').bind(name, link || "", repo || "", image || "", description || "").run()
-            return new Response(JSON.stringify({ success: success }))
+            return new Response(JSON.stringify({ success: success }), {
+                status: 200,
+                headers,
+            })
         }catch(err: any){
-            return new Response(JSON.stringify({ error: err.message ?? 'Something went wrong'}))
+            return new Response(JSON.stringify({ error: err.message ?? 'Something went wrong'}), {
+                status: 500,
+                headers,
+            })
         }
     }
 }

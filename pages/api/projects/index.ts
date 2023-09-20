@@ -5,6 +5,9 @@ export const config = {
     runtime: 'edge',
 }
 
+const headers = {
+    'content-type': 'application/json',
+} 
 
 export default async function handler(request: Request){
     if(request.method === 'GET'){
@@ -13,9 +16,15 @@ export default async function handler(request: Request){
     
         try{
             const { results } = await DB.prepare('SELECT * FROM Projects').bind().all();
-            return new Response(JSON.stringify({ results: results ?? null }))
+            return new Response(JSON.stringify({ results: results ?? null }), {
+                status: 200,
+                headers,
+            })
         }catch(err: any){
-            return new Response(JSON.stringify({ error: err.message ?? 'Something went wrong'}))
+            return new Response(JSON.stringify({ error: err.message ?? 'Something went wrong'}), {
+                status: 500,
+                headers,
+            })
         }
     }
 }
