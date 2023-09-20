@@ -56,7 +56,7 @@ export default function Dashboard() {
             try{
                 const { data } = await axios.post(url, {
                     headers: {
-                        authorization: `Bearer ${process.env.NEXT_PUBLIC_API_KEY}`,
+                        authorization: `${process.env.NEXT_PUBLIC_API_KEY}`,
                     },
                 })
                 if(data?.error){

@@ -32,7 +32,7 @@ export default async function handler(request: Request){
         }
     
         
-        const apiKey = request.headers?.get('Authorization')?.split(' ')[1] ?? '';
+        const apiKey = request.headers?.get('authorization') || '';
         if(apiKey !== process.env.NEXT_PUBLIC_API_KEY){
             return new Response(JSON.stringify({ error: 'Unauthorized User'}), {
                 status: 401,
