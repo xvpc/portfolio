@@ -56,7 +56,7 @@ export default function Dashboard() {
             try{
                 const { data } = await axios.post(url, {
                     headers: {
-                        Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_KEY}`,
+                        authorization: `Bearer ${process.env.NEXT_PUBLIC_API_KEY}`,
                     },
                 })
                 if(data?.error){
@@ -75,7 +75,7 @@ export default function Dashboard() {
     return (
         <div className='px-2 py-4 vh-100 text-center overflow-hidden bg-black bg-opacity-50 d-flex flex-column justify-content-center algin-items-center gap-5'>
             <h2 className='text-white fw-bold text-truncate'>Create New Project</h2>
-
+            {process.env.NEXT_PUBLIC_API_KEY || "??"}
             <Form onSubmit={handleSubmit} className='container d-flex flex-column justify-content-center align-items-center gap-4'>
                 <Form.Group className='d-flex flex-column justify-content-center align-items-center gap-3'>
                     <div className='d-flex flex-row flex-wrap flex-sm-nowrap justify-content-center align-items-center gap-3'>
