@@ -33,9 +33,9 @@ export default function ProjectContainer({name, image, link, repo, description}:
         transition={{duration: 0.5}}
         // viewport={{once: true}}
         >
-            <div style={{maxWidth: '500px'}}  className='rounded overflow-hidden my-0 my-md-4'>
+            <Link href={link || "#"} style={{maxWidth: '500px'}}  className='opacity-hover rounded overflow-hidden my-0 my-md-4'>
                 <ImageHolder image={image} title={name || "Project image"} />
-            </div>
+            </Link>
             <div className='overflow-hidden d-flex flex-column justify-content-center justify-content-md-between algin-items-center gap-3 px-2 pb-3 pb-md-0 text-center text-md-start'>
                 <motion.h2 
                 className='fw-bold'

@@ -11,7 +11,7 @@ const url = 'https://xvpc.dev/api/projects'
 export default async function getProjects() {
     if(process.env.NODE_ENV === 'production'){
         try{
-            const { data } = await axios.post(url)
+            const { data } = await axios.get(url)
             if(data?.error){
                 console.log(data.error || "Something went wrong!");
                 return projectData
