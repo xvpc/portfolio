@@ -69,7 +69,7 @@ export default function Introduction() {
                 transition={{duration: 0.3}}
                 >
                     <p className='p-0 m-0 fw-bold fs-4'>Hello, <span className='text-info'>I&#39;m</span></p>
-                    <h1 className='fw-bolder text-info font-monospace'>Mahmoud Nabil</h1>
+                    <h1 className='fw-bolder text-info'>Mahmoud Nabil</h1>
                     <h4 style={{fontSize: '20px'}} className='introduction-text-animation border-end border-2 border-white overflow-hidden text-nowrap ps-3 fw-bold'>{title}</h4>
                     <p style={{fontSize: '12px'}} className='w-75 text-center text-md-start p-0 m-0'>I&#39;m A Software engineer with +5 years of experience. I Enjoy Coding and Programming, but I shine more in Web development.</p>
                     <div className='introduction-links-container d-flex flex-row justify-content-center aglin-items-center gap-2'>
@@ -109,12 +109,11 @@ export default function Introduction() {
                 transition={{delay: 0.3, duration: 1}}
                 >
                     <Tilt options={defaultOptions} style={{width: '250px', height: '250px'}} className='position-relative'>
-                        <div style={{background: 'var(--main-color-shadow)', top: '4px', filter: 'blur(50px)'}} className='introduction-image-shadow w-100 h-100 position-absolute'></div>
-                        <div className='introduction-image-overlay w-100 h-100 start-50 translate-middle-x bg-info position-absolute'></div>
-                        <img style={{objectFit: 'cover', height: '350px'}} className='introduction-image remove-selecting w-100 position-absolute bottom-0' src={'./images/me-photo.png'} height={720} width={1080} alt='Me Photo' />
+                        <div style={{background: 'var(--main-color-shadow)', top: '10px', left: "10px", filter: 'blur(270px)'}} className='introduction-image-shadow w-100 h-100 position-absolute'></div>
+                        <div className='introduction-image-overlay w-100 h-100 start-50 translate-middle-x position-absolute'></div>
+                        <img style={{objectFit: 'cover', height: '350px'}} className='introduction-image remove-selecting w-100 position-absolute bottom-0' src={'./images/me-photo.png'} height={720} width={1080} alt='Image' />
                     </Tilt>
                 </motion.div>
-
             </div>
         </section>
     )

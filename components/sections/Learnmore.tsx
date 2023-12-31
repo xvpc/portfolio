@@ -12,6 +12,7 @@ import { motion } from 'framer-motion'
 
 // Others
 import Ripples from 'react-ripples'
+import { MdKeyboardArrowDown } from 'react-icons/md';
 
 export default function Learnmore() {
 
@@ -55,14 +56,18 @@ export default function Learnmore() {
             </motion.ol>
 
             <div className='d-flex flex-column justify-content-center align-items-center gap-2'>
-                <h6 className='text-center p-0 m-0'>Interested? You can find Me on Fiverr or Upwork</h6>
+                <h6 className='text-center p-0 m-0'>Interested?, You can find Me on Fiverr or Directlly get in touch with me!</h6>
                 <div className='w-100 d-flex flex-row justify-content-center align-items-center gap-2 text-center'>
                     <Ripples className='p-0 m-0 btn w-50 justify-content-center align-items-center'>
                         <Link style={{cursor: "pointer", background: '#1DBF73'}} href={process.env.NEXT_PUBLIC_FIVERR as string} target='_blank' className='text-white text-center w-100 p-2'><TbBrandFiverr className='fs-5 fw-bold' /></Link>
                     </Ripples>
+
                     <Ripples className='p-0 m-0 btn w-50 justify-content-center align-items-center'>
-                        <Link style={{cursor: "pointer", background: '#6fda44'}} href={process.env.NEXT_PUBLIC_UPWORK as string} target='_blank' className='text-white text-center w-100 p-2'><SiUpwork className='fs-5 fw-bold' /></Link>
+                        <Link style={{cursor: "pointer", background: 'var(--main-color)'}} href={"#contact-us"} className='text-nowrap text-white text-center w-100 p-2 fw-bold'>Contact me <MdKeyboardArrowDown size={20} /></Link>
                     </Ripples>
+                    {/* <Ripples className='p-0 m-0 btn w-50 justify-content-center align-items-center'>
+                        <Link style={{cursor: "pointer", background: '#6fda44'}} href={process.env.NEXT_PUBLIC_UPWORK as string} target='_blank' className='text-white text-center w-100 p-2'><SiUpwork className='fs-5 fw-bold' /></Link>
+                    </Ripples> */}
                 </div>
             </div>
             

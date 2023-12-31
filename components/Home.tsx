@@ -13,43 +13,39 @@ import { CircularProgress } from '@mui/material';
 
 
 export default function Home() {
-    const [loaded, setLoaded] = useState(false)
-    useEffect(() => {
-        let timeOut: ReturnType<typeof setTimeout>;
-        timeOut = setTimeout(() => {
-            setLoaded(true)
-        }, 400)
+    // const [loaded, setLoaded] = useState(false)
+    // useEffect(() => {
+    //     let timeOut: ReturnType<typeof setTimeout>;
+    //     timeOut = setTimeout(() => {
+    //         setLoaded(true)
+    //     }, 400)
         
-        return () => {
-            clearTimeout(timeOut)
-        }
-    }, [])
+    //     return () => {
+    //         clearTimeout(timeOut)
+    //     }
+    // }, [])
 
     // 
     return (
         <div className='d-flex flex-column justify-content-between align-items-center'>
-            {loaded ?
-            <>
-                {/* Introduction */}
-                <Introduction />
+            
+            {/* Introduction */}
+            <Introduction />
 
-                {/* Skills */}
-                <Skills />
+            {/* Skills */}
+            <Skills />
 
-                {/* Projects */}
-                <Projects />
-                
-                {/* Interested */}
-                <Interested />
+            {/* Projects */}
+            <Projects />
+            
+            {/* Interested */}
+            <Interested />
 
-                {/* Learn More */}
-                <Learnmore />
+            {/* Learn More */}
+            <Learnmore />
 
-                {/* Contact Me */}
-                <ContactUs />
-            </> :
-            <CircularProgress className='m-5' color="info" />
-            }
+            {/* Contact Me */}
+            <ContactUs />
         </div>
     )
 }

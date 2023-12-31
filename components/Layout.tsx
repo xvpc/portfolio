@@ -35,6 +35,7 @@ export default function Layout({ children, title }: props) {
                     <link rel="icon" type="image/png" sizes="32x32" href='./favicon/favicon-32x32.png'/>
                     <link rel="icon" type="image/png" sizes="16x16" href='./favicon/favicon-16x16.png'/>
             </Head>
+            
             <div className='text-white night-bg main-content d-flex flex-column justify-content-between min-vh-100'>
                 <Header />
 

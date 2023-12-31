@@ -17,7 +17,7 @@ export default function Main() {
   useEffect(() => {
     let timeOut: ReturnType<typeof setTimeout>;
 
-    timeOut = setTimeout(() => { setLoading(false) }, 500)
+    timeOut = setTimeout(() => { setLoading(false) }, 800)
     
     return () => {
       clearTimeout(timeOut)
@@ -26,7 +26,8 @@ export default function Main() {
 
   return (
     <Layout>
-      {loading ? <LinearProgress /> : <Home />}
+      {loading && <LinearProgress />}
+      <Home />
     </Layout>
   )
 }
