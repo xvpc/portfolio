@@ -39,19 +39,20 @@ export default function Interested() {
             whileInView={{opacity: 1}}
             transition={{duration: 1.4}}
             >
-                <div className='w-50 text-center d-flex flex-column justify-content-center align-items-center'>
+                <motion.div 
+                initial={{y:0}}
+                animate={{y: ["-6px", "6px", "-6px"]}}
+                transition={{duration: 3, repeat: Infinity}}
+                className='w-50 text-center d-flex flex-column justify-content-center align-items-center'>
                     <h2 
                     style={{filter: 'drop-shadow(8px 8px 15px var(--main-color))', transitionDuration: '1s', transitionDelay: '1s', fontFamily: "cursive, Arial, sans-serif"}} 
                     className='p-0 m-0 display-4 fw-bolder'
                     >
                         Interested?
                     </h2>
-                </div>
+                </motion.div>
 
                 <motion.div
-                initial={{y:0}}
-                animate={{y: ["-10px", "10px", "-10px"]}}
-                transition={{duration: 4, repeat: Infinity}}
                 >
                     <Swiper
                     effect={'cards'}
@@ -63,7 +64,7 @@ export default function Interested() {
                         interestedData && interestedData.map((items, index) => {
 
                         return(
-                            <SwiperSlide style={{background: `center / cover no-repeat ${items.color || 'rgba(30, 187, 235, 0.829)'} url(${items.image})`}} key={index} className={`position-relative p-3 d-flex flex-column justify-content-center align-items-start gap-1`}>
+                            <SwiperSlide style={{background: `center / cover no-repeat ${items.color || 'rgba(30, 187, 235, 0.829)'} url(${items.image})`}} key={index} className={`rounded-2 position-relative p-3 d-flex flex-column justify-content-center align-items-start gap-1`}>
                                 <h4 className='fw-bold border-bottom'>{items?.name}</h4>
                                 {loaded ?
                                 items?.button ? 
