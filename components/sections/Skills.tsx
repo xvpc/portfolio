@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { Button } from 'react-bootstrap';
 
 // Icons
-import { MdKeyboardArrowDown } from 'react-icons/md';
+import { MdKeyboardArrowDown, MdOutlineArrowOutward } from 'react-icons/md';
 
 // Mui
 import { Tooltip, useMediaQuery } from '@mui/material';
@@ -17,6 +17,7 @@ import ImageHolder from '@/lib/ImageHolder';
 
 // Data
 import skillsData from '@/data/skills.json'
+import Link from 'next/link';
 
 
 export default function Skills() {
@@ -42,7 +43,7 @@ export default function Skills() {
                     <p style={{fontSize: '14px'}} className='w-auto text-center text-md-start p-0 m-0 '>
                         Some Skills and Technologies that I know/use.
                     </p>
-                    <Button style={{cursor: "pointer"}} onClick={() => document?.querySelector('#projects')?.scrollIntoView({behavior: 'smooth'})} variant="info">Projects <MdKeyboardArrowDown /></Button>
+                    <Button className='text-white' style={{cursor: "pointer"}} onClick={() => document?.querySelector('#projects')?.scrollIntoView({behavior: 'smooth'})} variant="info">Projects <MdKeyboardArrowDown /></Button>
                 </motion.div>
 
                 <motion.div style={{maxWidth: '420px'}} 
@@ -79,16 +80,19 @@ export default function Skills() {
 
             <hr style={{height: "1px"}} className='w-100 bg-secondary bg-opacity-25' />
 
-            <div className='container overflow-hidden d-flex flex-column flex-md-row justify-content-between align-items-center py-5 px-md-3 rounded gap-3 gap-md-5'>
-                <motion.h2
-                    className='text-info fw-bold display-5'
-                    initial={{y: "100vh"}}
-                    animate={activeView ? {y:0} : {y: "100vh"}}
-                    transition={{delay: 0.2, duration: 0.8}}
-                    viewport={{once: true}}
+            <div className='container overflow-hidden d-flex flex-column flex-md-row justify-content-between align-items-center py-5 px-md-3 rounded gap-5 gap-md-5'>
+                <motion.div 
+                className='d-flex flex-column justify-content-center align-items-center align-items-md-start gap-2'
+                initial={{y: "100vh"}}
+                animate={activeView ? {y:0} : {y: "100vh"}}
+                transition={{delay: 0.2, duration: 0.8}}
+                viewport={{once: true}}
                 >
-                    GitHub Contributions
-                </motion.h2>
+                    <h2 className='text-dark fw-bold display-5'>GitHub</h2>
+                    <Link href={process.env.NEXT_PUBLIC_GITHUB as string} target='_blank'>
+                        <Button className='text-white text-center' style={{cursor: "pointer"}} onClick={() => document?.querySelector('#projects')?.scrollIntoView({behavior: 'smooth'})} variant="dark">Projects <MdOutlineArrowOutward size={22} /></Button>
+                    </Link>
+                </motion.div>
 
                 <motion.div 
                 style={{maxWidth: '420px', maxHeight: "130px"}} 
