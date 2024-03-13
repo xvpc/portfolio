@@ -88,9 +88,9 @@ export default function Skills() {
                 transition={{delay: 0.2, duration: 0.8}}
                 viewport={{once: true}}
                 >
-                    <h2 className='text-dark fw-bold display-5'>GitHub</h2>
+                    <h2 className='text-dark fw-bold display-5'>Contributions</h2>
                     <Link href={process.env.NEXT_PUBLIC_GITHUB as string} target='_blank'>
-                        <Button className='text-white text-center' style={{cursor: "pointer"}} onClick={() => document?.querySelector('#projects')?.scrollIntoView({behavior: 'smooth'})} variant="dark">Projects <MdOutlineArrowOutward size={22} /></Button>
+                        <Button className='text-white text-center' style={{cursor: "pointer"}} onClick={() => document?.querySelector('#projects')?.scrollIntoView({behavior: 'smooth'})} variant="dark">GitHub <MdOutlineArrowOutward size={22} /></Button>
                     </Link>
                 </motion.div>
 
