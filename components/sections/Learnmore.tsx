@@ -19,12 +19,12 @@ export default function Learnmore() {
     return (
         <section 
         id='learn-more'
-        className='space container d-flex flex-column text-center justify-content-center align-items-center gap-3' 
+        className='space container d-flex flex-column text-center justify-content-center align-items-center gap-4' 
         >
             <h3 className='hover-effect fw-bold'>How It Works?</h3>
 
             <motion.ol 
-            className="list-group list-group-numbered text-start w-100"
+            className="list-group list-group-numbered text-start w-100 mb-4"
             initial={{rowGap: 0}}
             whileInView={{rowGap: "20px"}}
             transition={{duration: 0.8, delay: 0.5}}
@@ -32,25 +32,33 @@ export default function Learnmore() {
                 <li className="list-group-item d-flex justify-content-between align-items-start">
                     <div className="me-auto">
                         <div className="text-info ms-2 fw-bold">Website Design</div>
-                        <p className='p-0 m-0 ms-4'>The client shares the design of the website with me in any format psd, figma, xd, sketch, etc...</p>
+                        <p className='p-0 m-0 ms-4'>
+                            The client shares the design of the website with me in any format Psd, Figma, xd, sketch or even a PNG picture.
+                        </p>
                     </div>
                 </li>
                 <li className="list-group-item d-flex justify-content-between align-items-start">
                     <div className="me-auto">
                         <div className="text-info ms-2 fw-bold">Understanding the requirements</div>
-                        <p className='p-0 m-0 ms-4'>I will go through the design of the website to understand it and know what the project is about.</p>
+                        <p className='p-0 m-0 ms-4'>
+                            I will go through the website&#39;s design to understand it and know what the project is about.
+                        </p>
                     </div>
                 </li>
                 <li className="list-group-item d-flex justify-content-between align-items-start">
                     <div className="me-auto">
                         <div className="text-info ms-2 fw-bold">Deal</div>
-                        <p className='p-0 m-0 ms-4'>Time and price will be decided according to the complexity of the project. After agreeing on a deal, I will start working on the project.</p>
+                        <p className='p-0 m-0 ms-4'>
+                            Time and price will be decided according to the complexity of the project. After agreeing on a deal, I will start working on the project.
+                        </p>
                     </div>
                 </li>
                 <li className="list-group-item d-flex justify-content-between align-items-start">
                     <div className="me-auto">
                         <div className="text-info ms-2 fw-bold">Delivery</div>
-                        <p className='p-0 m-0 ms-4'>The project will be completed and delivered within the agreed time.</p>
+                        <p className='p-0 m-0 ms-4'>
+                            The project will be completed and delivered within the agreed time.
+                        </p>
                     </div>
                 </li>
             </motion.ol>

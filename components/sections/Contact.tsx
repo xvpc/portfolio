@@ -59,6 +59,9 @@ export default function ContactUs() {
                 console.log(result.text)
                 toastifySuccess(result.text)
                 setLoadingButton(false)
+                e.target[0].value = "";
+                e.target[1].value = "";
+                e.target[2].value = "";
             }, (error) => {
                 console.log(error.text)
                 toastifyError(error.text)
@@ -82,7 +85,7 @@ export default function ContactUs() {
     return (
         <motion.section 
         id='contact-us'
-        className='extra-space bg-black bg-opacity-25 mb-0 container-fluid d-flex flex-column text-center justify-content-center align-items-center gap-3' 
+        className='extra-space bg-black px-0 bg-opacity-25 mb-0 container-fluid d-flex flex-column text-center justify-content-center align-items-center gap-3' 
         initial={{opacity: 0}}
         whileInView={{opacity: 1}}
         transition={{duration: 1.2}}

@@ -38,7 +38,7 @@ export default function Projects() {
     return (
         <section 
         id='projects'
-        className='extra-space bg-black bg-opacity-50 top-bottom-pattren-box overflow-hidden container-fluid d-flex flex-column justify-content-center align-items-center gap-3' 
+        className='extra-space bg-black bg-opacity-50 top-bottom-pattren-box overflow-hidden container-fluid d-flex flex-column justify-content-center align-items-center gap-5' 
         >
             <div 
             onClick={() => document?.querySelector('#projects')?.scrollIntoView({behavior: 'smooth'})} 

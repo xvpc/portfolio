@@ -3,13 +3,13 @@
         "image": "./images/swiper1.jpg",
         "color": "rgba(30, 187, 235, 0.829)",
         "name": "Who AM I?",
-        "description": "Hello, my name is Mahmoud Nabil you may also know me as 'Viper'. I'm A Software engineer with +5 years of experience. I Enjoy Coding and Programming, but I shine more in Web development."
+        "description": "Hello, my name is Mahmoud Nabil you may also know me as 'Viper'. I'm A Software engineer with +5 years of experience. I Enjoy Coding and Programming, I shine more in Web development."
     },
     {
         "image": "./images/swiper2.jpg",
         "color": "#ffc107",
         "name": "Why Should You Choose Me?",
-        "description": "Along from the fact that I'm An expert in what I do, I also use the best technology out there to provide the best user experience and to give my clients A long period of the project If they needed to add/change anything later on. What I offer is a Professional high quality Front-end web development and responsive user-friendly Web applications."
+        "description": "Along from the fact that I'm An expert in my field, I also use the best technology out there to provide the best user experience and to give my clients A long period of the project If they needed to add/change anything later on. What I offer is a Professional high quality Front-end/back-end web development and responsive user-friendly Web applications."
     },
     {
         "image": "./images/swiper3.jpg",

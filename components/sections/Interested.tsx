@@ -16,7 +16,7 @@ import 'swiper/css';
 import "swiper/css/effect-cards";
 
 // Data
-import interestedData from '../../data/interested.json'
+import interestedData from '@/data/interested.json'
 
 // Framer motion
 import { motion } from 'framer-motion'

@@ -64,9 +64,14 @@ export default function Dashboard() {
                     // },
                 })
                 if(data?.error){
-                    toastifyError(data.error || "Something went wrong!")
+                    toastifyError(data.error || "Something went wrong!");
                 }else{
-                    toastifySuccess("Project created successfully")
+                    toastifySuccess("Project created successfully");
+                    e.target[0].value = "";
+                    e.target[1].value = "";
+                    e.target[2].value = "";
+                    e.target[3].value = "";
+                    e.target[4].value = "";
                 }
             }catch(err: any){
                 console.log(err.message || "Something went wrong!")

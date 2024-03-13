@@ -42,17 +42,17 @@
         "description": "Tic tac toe game."
     },
     {
-        "name": "Animations",
-        "link": "https://xvpc.github.io/animations",
-        "image": "https://i.ibb.co/WVWZW8C/animations.png",
-        "repo": "https://github.com/xvpc/animations",
-        "description": "A simple Nextjs Website that uses Framer-motion for testing animations and other features."
-    },
-    {
         "name": "Quick Recips",
         "link": "https://quickrecipes.pages.dev",
         "image": "https://i.ibb.co/Fg6btdy/quickrecipes.png",
         "repo": "https://github.com/xvpc/quickrecipes",
         "description": "A simple non-profit web application that helps with searching for Recipes/meals for personal needs or sharing them with others, It's made using Themealdb API."
+    },
+    {
+        "name": "Typer",
+        "link": "https://xvpc.github.io/typer",
+        "image": "https://i.ibb.co/hRHxQM4/typer.png",
+        "repo": "https://github.com/xvpc/typer",
+        "description": "Typer is a simple and convenient online typing tutor for everybody who wants to type better. With Typer you can free up some of your time to practice your typing skills and Typer will help you type much faster."
     }
 ]

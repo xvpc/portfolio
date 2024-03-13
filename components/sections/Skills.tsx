@@ -7,56 +7,98 @@ import { Button } from 'react-bootstrap';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 
 // Mui
-import { useMediaQuery } from '@mui/material';
+import { Tooltip, useMediaQuery } from '@mui/material';
 
 // Framer motion
 import { motion } from 'framer-motion'
 
+// Lib
+import ImageHolder from '@/lib/ImageHolder';
+
+// Data
+import skillsData from '@/data/skills.json'
+
+
 export default function Skills() {
     const [activeView, setActiveView] = useState(false);
 
-    const matchSm = useMediaQuery('(min-width: 576px)')
 
     return (
         <motion.section 
         id='skills'
-        className='container-fluid extra-space' 
+        className='container px-0 extra-space d-flex flex-column justify-content-between align-items-center gap-2' 
         onViewportEnter={() => setActiveView(true)}
         onViewportLeave={() => setActiveView(false)}
         >
-            <div className='container overflow-hidden d-flex flex-column flex-md-row justify-content-between align-items-center py-5 rounded gap-5'>
-
+            <div className='container overflow-hidden d-flex flex-column flex-md-row justify-content-between align-items-center py-5 px-md-3 rounded gap-5'>
                 <motion.div 
                 className='d-flex flex-column justify-content-center align-items-center align-items-md-start gap-3'
                 initial={{y: "-100vh"}}
                 animate={activeView ? {y:0} : {y: "-100vh"}}
                 transition={{duration: 0.5}}
+                viewport={{once: true}}
                 >
                     <h2 className='text-info fw-bold display-5'>My Skills</h2>
-                    <p style={{fontSize: '14px'}} className='w-75 text-center text-md-start p-0 m-0 '>Some Skills and Technologies that I master.</p>
-                    <Button style={{cursor: "pointer"}} onClick={() => document?.querySelector('#projects')?.scrollIntoView({behavior: 'smooth'})} variant="success">Projects <MdKeyboardArrowDown /></Button>
+                    <p style={{fontSize: '14px'}} className='w-auto text-center text-md-start p-0 m-0 '>
+                        Some Skills and Technologies that I know/use.
+                    </p>
+                    <Button style={{cursor: "pointer"}} onClick={() => document?.querySelector('#projects')?.scrollIntoView({behavior: 'smooth'})} variant="info">Projects <MdKeyboardArrowDown /></Button>
                 </motion.div>
 
-                <motion.div style={{maxWidth: '420px', fontSize: matchSm ? '15px' : '10px'}} 
+                <motion.div style={{maxWidth: '420px'}} 
                 className='flex-wrap w-100 d-flex flex-row justify-content-center align-items-center gap-2'
+                initial={{y: "-100vh"}}
+                animate={activeView ? {y:0} : {y: "-100vh"}}
+                transition={{duration: 0.5}}
+                viewport={{once: true}}
+                >
+                    <ul style={{display: "grid", gap: "10px", gridTemplateColumns: "repeat(auto-fill, minmax(50px, 1fr))", justifyContent: "center", alignItems: "center"}} className=''>
+                        {
+                            skillsData?.data.length > 0 ?
+                            skillsData.data.map((item, index) => (
+                                <Tooltip 
+                                key={item.name || index} 
+                                title={
+                                <div className='d-flex flex-column justify-content-between align-items-center gap-1 px-1 py-1'>
+                                    <p className='p-0 m-0 fw-bold text-uppercase'>{item.name}</p>
+                                    <span className='p-0 m-0 text-capitalize text-success'>{item.state}</span>
+                                </div>
+                                } 
+                                arrow
+                                >
+                                    <div>
+                                        <ImageHolder image={item.icon} title={item.name || "Skill image"} pointer hover />
+                                    </div>
+                                </Tooltip>
+                            )) :
+                            <div className="text-danger fw-bold fs-3 text-nowrap">No skills!</div>
+                        }
+                    </ul>
+                </motion.div>
+            </div>
+
+            <hr style={{height: "1px"}} className='w-100 bg-secondary bg-opacity-25' />
+
+            <div className='container overflow-hidden d-flex flex-column flex-md-row justify-content-between align-items-center py-5 px-md-3 rounded gap-3 gap-md-5'>
+                <motion.h2
+                    className='text-info fw-bold display-5'
+                    initial={{y: "100vh"}}
+                    animate={activeView ? {y:0} : {y: "100vh"}}
+                    transition={{delay: 0.2, duration: 0.8}}
+                    viewport={{once: true}}
+                >
+                    GitHub Contributions
+                </motion.h2>
+
+                <motion.div 
+                style={{maxWidth: '420px', maxHeight: "130px"}} 
+                className='rounded overflow-hidden flex-wrap w-100 d-flex flex-row justify-content-center align-items-center gap-2'
                 initial={{y: "100vh"}}
                 animate={activeView ? {y:0} : {y: "100vh"}}
                 transition={{delay: 0.2, duration: 0.8}}
+                viewport={{once: true}}
                 >
-                    <ul className='d-flex flex-column justify-content-center align-items-center gap-2'>
-                        {
-                            ['html', 'css', 'javascript', 'bootstrap'].map((items, index) => (
-                                <li key={items || index} className='opacity-hover w-100 bg-secondary bg-opacity-25 text-center text-md-start p-3 p-md-2 rounded text-uppercase'><span className='fw-bold text-info'>0{index + 1}.</span> {items}</li>
-                            ))
-                        }
-                    </ul>
-                    <ul className='d-flex flex-column justify-content-center align-items-center gap-2'>
-                        {
-                            ['sass/scss', 'react.js', 'redux', 'next.js'].map((items, index) => (
-                                <li key={items || index} className='opacity-hover w-100 bg-secondary bg-opacity-25 text-center text-md-start p-3 p-md-2 rounded text-uppercase'><span className='fw-bold text-info'>0{index + 5}.</span> {items}</li>
-                            ))
-                        }
-                    </ul>
+                    <ImageHolder image={'./images/github-contributions.png'} title={"GitHub Contributions"} select />
                 </motion.div>
             </div>
         </motion.section>

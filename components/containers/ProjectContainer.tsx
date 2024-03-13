@@ -31,13 +31,13 @@ export default function ProjectContainer({name, image, link, repo, description}:
         initial={{y: "100px", opacity: 0}}
         whileInView={{y: 0, opacity: 1}}
         transition={{duration: 0.5}}
-        // viewport={{once: true}}
+        viewport={{once: true}}
         >
             <Link 
             href={link || "#"} target='_blank'
             style={{maxWidth: '500px'}}  
-            className='opacity-hover rounded overflow-hidden my-0 my-md-4'>
-                <ImageHolder image={image} title={name || "Project image"} />
+            className='rounded overflow-hidden my-0 my-md-4 ms-md-3'>
+                <ImageHolder image={image} title={name || "Project image"} pointer hover />
             </Link>
             <div className='overflow-hidden d-flex flex-column justify-content-center justify-content-md-between algin-items-center gap-3 px-2 pb-3 pb-md-0 text-center text-md-start'>
                 <motion.h2 

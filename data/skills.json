@@ -1,0 +1,24 @@
+{
+    "data": [
+        {"name": "Javascript", "state": "using", "icon": "https://raw.githubusercontent.com/LeonardSSH/vscord/main/assets/icons/js.png"},
+        {"name": "Typescript", "state": "using", "icon": "https://raw.githubusercontent.com/LeonardSSH/vscord/main/assets/icons/ts.png"},
+        {"name": "HTML", "state": "using", "icon": "https://raw.githubusercontent.com/leonardssh/vscord/main/assets/icons/html.png"},
+        {"name": "CSS", "state": "using", "icon": "https://raw.githubusercontent.com/leonardssh/vscord/main/assets/icons/css.png"},
+        {"name": "Dart", "state": "knowledgeable", "icon": "https://raw.githubusercontent.com/LeonardSSH/vscord/main/assets/icons/dart.png"},
+        {"name": "Python", "state": "knowledgeable", "icon": "https://raw.githubusercontent.com/LeonardSSH/vscord/main/assets/icons/python.png"},
+        {"name": "Rust", "state": "using", "icon": "https://raw.githubusercontent.com/LeonardSSH/vscord/main/assets/icons/rust.png"},
+        {"name": "C#", "state": "knowledgeable", "icon": "https://raw.githubusercontent.com/LeonardSSH/vscord/main/assets/icons/csharp.png"},
+        {"name": "C++", "state": "knowledgeable", "icon": "https://raw.githubusercontent.com/leonardssh/vscord/main/assets/icons/cpp.png"},
+        {"name": "ReactJs", "state": "using", "icon": "https://raw.githubusercontent.com/leonardssh/vscord/main/assets/icons/tsx.png"},
+        {"name": "NextJs", "state": "using", "icon": "https://camo.githubusercontent.com/9e98fa0ea1973836a885b4f982165fbbc592036fcc2ad860c41c68260beb8dd2/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e406c61746573742f69636f6e732f6e6578746a732f6e6578746a732d6f726967696e616c2e737667"},
+        {"name": "Flutter", "state": "knowledgeable", "icon": "https://camo.githubusercontent.com/9e356311fef45e4cbbf2c8171c858fc1fedf2531fb54d49efd96dfebeccc8901/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e406c61746573742f69636f6e732f666c75747465722f666c75747465722d6f726967696e616c2e737667"},
+        {"name": "Tailwind", "state": "using", "icon": "https://raw.githubusercontent.com/LeonardSSH/vscord/main/assets/icons/tailwind.png"},
+        {"name": "Material-ui", "state": "using", "icon": "https://camo.githubusercontent.com/368505d27341b3867d3af545943df3f32246f4406accce2027eb3e35bcdceaac/68747470733a2f2f6d75692e636f6d2f7374617469632f6c6f676f2e706e67"},
+        {"name": "Bootstrap", "state": "using", "icon": "https://camo.githubusercontent.com/9ee806be83385d8b6a369a74cb1fc746644521a279ba959174ce5b9e75caf384/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e2f69636f6e732f626f6f7473747261702f626f6f7473747261702d6f726967696e616c2e737667"},
+        {"name": "Redux", "state": "using", "icon": "https://camo.githubusercontent.com/b0b9568f92cc2afa1b7c9beaea63e6feb5c33a475a671921e25682f0f16cb0b7/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e2f69636f6e732f72656475782f72656475782d6f726967696e616c2e737667"},
+        {"name": "Sass/Scss", "state": "using", "icon": "https://camo.githubusercontent.com/575b33e86739b657387aaf2598c4f9d6677a60a33718d65e11e0d81cbb7cc09c/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e2f69636f6e732f736173732f736173732d6f726967696e616c2e737667"},
+        {"name": "Sql", "state": "knowledgeable", "icon": "https://raw.githubusercontent.com/LeonardSSH/vscord/main/assets/icons/sql.png"},
+        {"name": "Sqlite", "state": "using", "icon": "https://camo.githubusercontent.com/94763b346d2b59b5afc9cc9df48d3901827a36aea1208cb7fd6817dcc5d4ee45/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e406c61746573742f69636f6e732f73716c6974652f73716c6974652d6f726967696e616c2e737667"},
+        {"name": "Mongodb", "state": "using", "icon": "https://camo.githubusercontent.com/372ddcc1f13363e6e4e3d998571674bce6c902117b6796df4a24fef9eddef5ea/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f64657669636f6e732f64657669636f6e406c61746573742f69636f6e732f6d6f6e676f64622f6d6f6e676f64622d6f726967696e616c2e737667"}
+    ]
+}
